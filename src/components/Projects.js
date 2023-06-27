@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const ProjectsContainer = styled.section`
-    height: 200vh;
+    height: 100vh;
     background-color: #ad5ad3;
 `
 
