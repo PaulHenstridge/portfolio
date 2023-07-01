@@ -4,6 +4,7 @@ import Navigation from "./Navigation";
 const HeroContainer = styled.div`
     background-color:#FF0;
     padding: 8rem 0;
+    height:100vh;
 `
 
 const StyledH1 = styled.h1`
