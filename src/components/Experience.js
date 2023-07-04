@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const ExperienceContainer = styled.section`
 background-color: #4152de;
-height: 50vh;
+height: 100vh;
 `
 
 

@@ -12,25 +12,30 @@ const ScrollNavWrapper = styled.nav`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    opacity: ${props => props.show ? 1 : 0};
+    transition: opacity 0.8s ease;
 `
-const NavLink = styled(ScrollLink)`
+const StyledNavLink = styled(ScrollLink)`
     background-color: transparent;
     
     &.active {
         background-color: red; 
-        font-size: 5rem;
     }
 `
+const NavLink = ({ to, children }) => (
+    <StyledNavLink to={to} smooth={true} duration={800} spy={true} activeClass="active" offset={-window.innerHeight / 2.5}>
+        {children}
+    </StyledNavLink>
+);
 
-
-const ScrollNav = () => {
-    return (<ScrollNavWrapper>
-        <NavLink to="aboutme" smooth={true} duration={500} spy={true} activeClass="active" >About Me</NavLink>
-        <NavLink to="projects" smooth={true} duration={500} spy={true} activeClass="active" >My Projects</NavLink>
-        <NavLink to="experience" smooth={true} duration={500} spy={true} activeClass="active" >My Experience</NavLink>
-        <NavLink to="contact" smooth={true} duration={500} spy={true} activeClass="active" >Contact Me</NavLink>
-
-    </ScrollNavWrapper>);
+const ScrollNav = ({ show }) => {
+    return (
+        <ScrollNavWrapper show={show}>
+            <NavLink to="aboutme" >About</NavLink>
+            <NavLink to="projects" >Projects</NavLink>
+            <NavLink to="experience" >Experience</NavLink>
+            <NavLink to="contact" >Contact</NavLink>
+        </ScrollNavWrapper>);
 }
 
 export default ScrollNav;

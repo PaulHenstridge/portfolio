@@ -9,6 +9,7 @@ const AboutMeContainer = styled.section`
     justify-content: space-around;
     align-items: center;
     padding: 6rem;
+    height:100vh;
    
 `
 const InnerContainer = styled.div`
