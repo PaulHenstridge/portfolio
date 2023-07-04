@@ -6,7 +6,7 @@ const ProjectsContainer = styled.section`
 `
 
 const Projects = () => {
-    return (<ProjectsContainer>
+    return (<ProjectsContainer id="projects">
         <h2>My Projects</h2>
     </ProjectsContainer>);
 }

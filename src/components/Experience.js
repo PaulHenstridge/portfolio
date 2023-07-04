@@ -7,7 +7,7 @@ height: 50vh;
 
 
 const Experience = () => {
-    return (<ExperienceContainer>
+    return (<ExperienceContainer id="experience" >
         <h2>Experience</h2>
     </ExperienceContainer>);
 }

@@ -6,7 +6,7 @@ const ContactContainer = styled.section`
 `
 
 const Contact = () => {
-    return (<ContactContainer>
+    return (<ContactContainer id="contact" >
         <h3>Contact me</h3>
     </ContactContainer>);
 }
