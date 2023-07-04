@@ -19,6 +19,9 @@ const StyledH1 = styled.h1`
 
 const ScrollHere = styled(ScrollLink)`
     font-size: 3rem;
+    cursor: pointer;
+    
+ 
 `
 
 
@@ -28,7 +31,7 @@ const HeroHeader = () => {
             <Fade duration="1000" direction="down">
                 <StyledH1>Hi, I'm Ed Winchester</StyledH1>
             </Fade>
-            <ScrollHere to="aboutme" smooth={true} duration={500}> Scroll</ScrollHere>
+            <ScrollHere to="aboutme" smooth={true} duration={800}> Scroll </ScrollHere>
         </HeroContainer>
 
     )

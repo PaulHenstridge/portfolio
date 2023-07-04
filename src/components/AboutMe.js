@@ -17,11 +17,13 @@ const InnerContainer = styled.div`
     justify-content: space-around;
     align-items: center;
     color: white;
+    width:100%;
+    padding-right: 6rem;
 `
 
 const AboutText = styled.p`
     width: 70vw;
-    padding: 2rem;
+    padding: 3rem;
 `
 
 const DummyPic = styled.div`
