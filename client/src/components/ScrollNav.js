@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import { Link as ScrollLink } from 'react-scroll';
-import { Fade } from "react-awesome-reveal";
-
 
 const ScrollNavWrapper = styled.nav`
     position: fixed;

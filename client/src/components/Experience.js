@@ -6,6 +6,8 @@ import rmBg from "../assets/postbox-kutan-ural.jpg"
 import ecoBg from "../assets/tomatoes-markus-spiske.jpg"
 import ccBg from "../assets/CodeClan.png"
 
+import PageScroll from "./PageScroll";
+
 const ExperienceContainer = styled.section`
     position: relative;
     background-color: #4152de;
@@ -18,6 +20,7 @@ const Experience = () => {
         <ExpPanel data={ExpData.CC} bg={ccBg} />
         <ExpPanel data={ExpData.RM} bg={rmBg} />
         <ExpPanel data={ExpData.ECO} bg={ecoBg} />
+        <PageScroll to="contact" />
     </ExperienceContainer>);
 }
 

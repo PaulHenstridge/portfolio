@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import { devIcons } from "../assets/devicons";
 
+import PageScroll from "./PageScroll";
+
 const AboutMeContainer = styled.section`
     background-color:rgb(13, 20, 34);
     display:flex;
@@ -61,6 +63,7 @@ const AboutMe = () => {
                         return <i key={index} className={icon}></i>
                     })}
                 </IconsContainer>
+                <PageScroll to="projects" />
             </AboutMeContainer>
 
         </>

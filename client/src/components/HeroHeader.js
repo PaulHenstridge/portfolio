@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import { Link as ScrollLink } from 'react-scroll';
+import PageScroll from "./PageScroll";
 
 const HeroContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items:center;
     background-color:#FF0;
     padding: 8rem 0;
     height:100vh;
@@ -14,16 +16,7 @@ const HeroContainer = styled.div`
 
 const StyledH1 = styled.h1`
     font-size:6rem;
-    
 `
-
-const ScrollHere = styled(ScrollLink)`
-    font-size: 3rem;
-    cursor: pointer;
-    
- 
-`
-
 
 const HeroHeader = () => {
     return (
@@ -31,7 +24,7 @@ const HeroHeader = () => {
             <Fade duration="1000" direction="down">
                 <StyledH1>Hi, I'm Ed Winchester</StyledH1>
             </Fade>
-            <ScrollHere to="aboutme" smooth={true} duration={800}> Scroll </ScrollHere>
+            <PageScroll to="aboutme" />
         </HeroContainer>
 
     )
