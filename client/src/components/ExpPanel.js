@@ -4,7 +4,7 @@ const ExpPanel = ({ data, bg }) => {
 
     const ExpContainer = styled.article`
         position:absolute;
-        border: 2px solid white;
+        border: 8px solid rgb(13, 20, 34);
         width:${props => props.data.styles.width};
         height:${props => props.data.styles.height};
         top:${props => props.data.styles.top};
@@ -12,6 +12,7 @@ const ExpPanel = ({ data, bg }) => {
 
         background-image:url(${props => props.bg});
         background-size:cover;
+        background-position:right;
 
     `
 

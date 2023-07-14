@@ -14,13 +14,23 @@ const ExperienceContainer = styled.section`
     height: 100vh;
 `
 
+const ScrollContainer = styled.div`
+    display:flex;
+    position:absolute;
+    bottom:8rem;
+    left:50%;
+    transform: translateX(-50%)
+`
+
 
 const Experience = () => {
     return (<ExperienceContainer id="experience" >
         <ExpPanel data={ExpData.CC} bg={ccBg} />
         <ExpPanel data={ExpData.RM} bg={rmBg} />
         <ExpPanel data={ExpData.ECO} bg={ecoBg} />
-        <PageScroll to="contact" />
+        <ScrollContainer>
+            <PageScroll to="contact" />
+        </ScrollContainer>
     </ExperienceContainer>);
 }
 
