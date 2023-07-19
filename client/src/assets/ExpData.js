@@ -25,7 +25,7 @@ export const ExpData = {
     ECO: {
         bgImg: "eco-pic",
         header: "East Coast Organics",
-        bullets: ["a", "b", "c", "d"],
+        bullets: ["a paragraph of text about stuff.", "b", "c", "d"],
         styles: {
             width: '50%',
             height: '50%',

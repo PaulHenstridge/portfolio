@@ -48,6 +48,10 @@ const IconsContainer = styled.aside`
     flex-wrap:wrap;
     width: 70%;
     justify-content: center;
+    background-color:rgb(55,55,55,0.2);
+    padding:3.5rem;
+    border-radius:35%;
+    box-shadow:inset 0px 0px 38px 18px rgb(13, 20, 34);
 
     i {
         font-size: 4rem;
