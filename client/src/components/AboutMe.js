@@ -19,7 +19,6 @@ const InnerContainer = styled.div`
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
-    color: white;
     width:100%;
     height:40vh;
     padding-right: 6rem;
@@ -34,13 +33,7 @@ const InnerContainer = styled.div`
 const AboutText = styled.p`
     width: 70vw;
     padding: 3rem;
-`
-
-const DummyPic = styled.div`
-    width:12rem;
-    height: 16rem;
-    border-radius:25%;
-    background-color:#fff;
+    font-size: 1.6rem;
 `
 
 const IconsContainer = styled.aside`
@@ -68,7 +61,6 @@ const AboutMe = () => {
                     <AboutText>About me  - Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, saepe. Cumque reprehenderit possimus illo voluptate explicabo sunt dignissimos vel eos, id nostrum quam nisi rerum sit mollitia maxime eius. Repellat.
                         Vitae eligendi provident nobis doloribus, ut nemo rerum adipisci illum quia possimus, aperiam incidunt laboriosam. Voluptatibus totam earum quibusdam tempore aspernatur id nesciunt odit, placeat molestias eos, deserunt doloribus unde.
                     </AboutText>
-                    {/* <DummyPic /> */}
                 </InnerContainer>
                 <IconsContainer>
                     {devIcons.map((icon, index) => {

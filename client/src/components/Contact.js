@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 import styled from "styled-components";
+import seaSail from "../assets/SeaSail.jpg"
 
 const ContactContainer = styled.section`
     display:flex;
@@ -9,6 +10,10 @@ const ContactContainer = styled.section`
     justify-content:center;
     background-color:#5d1def;
     height:100vh;
+    background-image:url(${seaSail});
+    /* background-repeat:no-repeat; */
+    background-size: cover;
+    background-attachment:fixed;
 `
 const StyledForm = styled.form`
     display: flex;
