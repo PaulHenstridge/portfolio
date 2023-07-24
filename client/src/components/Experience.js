@@ -24,7 +24,6 @@ const sharedStyles = css`
   background-position: right;
   transition: all 0.5s ease;
   cursor:pointer;
-  margin:1rem solid rgb(13, 20, 34);
 `;
 
 const expandStyle = css`
@@ -53,7 +52,7 @@ const CCExp = styled.article`
 const CCHeadline = styled.h3`
     grid-column-start:2;
     grid-row-start:2;
-    font-size: 6rem;
+    font-size: 4rem;
 `
 const RMExp = styled.article`
     ${sharedStyles}
@@ -70,7 +69,7 @@ const RMExp = styled.article`
 const RMHeadline = styled.h3`
     grid-column-start:2;
     grid-row-start:2;
-    font-size: 4rem;
+    font-size: 3rem;
 `
 const RMText1 = styled.p`
     grid-row-start:2;
@@ -97,7 +96,7 @@ const ECOExp = styled.article`
 const ECOHeadline = styled.h3`
     grid-column-start:2;
     grid-row-start:2;
-    font-size: 4rem;
+    font-size: 3rem;
 `
 const ECOText = styled.p`
     grid-row-start:2;

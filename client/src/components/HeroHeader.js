@@ -20,7 +20,23 @@ const HeroContainer = styled.div`
 `
 
 const StyledH1 = styled.h1`
-    font-size:6rem;
+    font-size:3rem;
+
+    @media (min-width:375px) {
+        font-size:3rem;
+    }
+    @media (min-width:580px) {
+        font-size:3.6rem;
+    }
+    @media (min-width:800px) {
+        font-size:4.2rem;
+    }
+    @media (min-width:1040px) {
+        font-size:5rem;
+    }
+    @media (min-width:1880px) {
+        font-size:6rem;
+    }
 `
 
 const HeroHeader = () => {

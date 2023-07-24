@@ -12,7 +12,7 @@ const AboutMeContainer = styled.section`
     /* padding: 6rem 0; */
     height:100vh;
     /* margin:8rem 0; */
-    padding:8rem 0;
+    padding:4rem 0;
    
 `
 const InnerContainer = styled.div`
@@ -27,19 +27,31 @@ const InnerContainer = styled.div`
     background-size: cover;
     background-position: right;
     margin-bottom:4rem;
+    max-width:820px;
 
 `
 
 const AboutText = styled.p`
-    width: 70vw;
+    width: 80%;
     padding: 3rem;
-    font-size: 1.6rem;
+    font-size: 0.6rem;
+ 
+    @media (min-width:580px) {
+        font-size:0.8rem;
+    }
+    @media (min-width:800px) {
+        font-size:1rem;
+    }
+
 `
 
 const IconsContainer = styled.aside`
     display:flex;
     flex-wrap:wrap;
-    width: 70%;
+    width: 90%;
+    @media (min-width:375px) {
+        width:90%;
+    }
     justify-content: center;
     background-color:rgb(55,55,55,0.2);
     padding:3.5rem;
@@ -47,8 +59,21 @@ const IconsContainer = styled.aside`
     box-shadow:inset 0px 0px 38px 18px rgb(13, 20, 34);
 
     i {
-        font-size: 4rem;
+        font-size: 1.6rem;
         padding:0.4rem 0.8rem;
+ 
+    @media (min-width:580px) {
+        font-size:2rem;
+    }
+    @media (min-width:800px) {
+        font-size:2.4rem;
+    }
+    @media (min-width:1040px) {
+        font-size:2.8rem;
+    }
+    @media (min-width:1880px) {
+        font-size:3.6rem;
+    }
     }
 `
 

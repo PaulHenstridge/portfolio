@@ -10,7 +10,7 @@ const ScrollMe = styled(ScrollLink)`
     transform: rotate(45deg);
     border-bottom: 8px solid red;
     border-right: 8px solid red;
-    z-index:5;
+    z-index:15;
     /* margin-bottom:8rem; */
     /* padding: 8rem 0; */
 `

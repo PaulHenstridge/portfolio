@@ -39,7 +39,20 @@ const ProjectPanel = styled.article`
 
     & > p {
         padding: 2rem;
-        font-size: 1.6rem;
+        font-size: 0.6rem;
+        @media (min-width:580px) {
+            font-size:0.8rem;
+        }
+        @media (min-width:800px) {
+            font-size:1rem;
+        }
+        @media (min-width:1040px) {
+        font-size:1.2rem;
+        }
+        @media (min-width:1880px) {
+            font-size:1.6rem;
+        }
+
         
     }
 
