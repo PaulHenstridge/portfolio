@@ -5,7 +5,7 @@ const ScrollNavWrapper = styled.nav`
     position: fixed;
     right: 0;
     top: 30%;
-    width: 6rem;
+    /* width: 0.5rem; */
     height: 40vh;
     z-index:10;
     background-color: transparent;
@@ -19,9 +19,12 @@ const ScrollNavWrapper = styled.nav`
 const StyledNavLink = styled(ScrollLink)`
     background-color: white;
     cursor: pointer;
-    width:3rem;
-    height: 3rem;
     border-radius:50%;
+    width:1rem;
+    height: 1rem;
+
+
+
     
     &.active {
         background-color: red; 
