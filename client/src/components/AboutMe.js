@@ -27,7 +27,7 @@ const InnerContainer = styled.div`
     background-size: cover;
     background-position: right;
     margin-bottom:4rem;
-    max-width:820px;
+    max-width:850px;
 
 `
 

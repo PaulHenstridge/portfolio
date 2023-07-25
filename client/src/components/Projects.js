@@ -28,18 +28,39 @@ const ProjectPanel = styled.article`
     z-index:6;
     margin-bottom:2rem;
     display:flex;
+    @media(max-width:650px){
+        flex-direction:column;
+        height:min-content;
+    }
     justify-content: space-between;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.6px);
+    -webkit-backdrop-filter: blur(3.6px);
+
     & > img{
-        width: 100%;
-        max-width: 25%; 
-        min-width:50%;
-        height: auto;
+        /* width: 100%; */
+        max-width: 50%; 
+        aspect-ratio:1;
+        @media(max-width:650px){
+            max-width:80%;
+            max-height:80%;
+            margin:0 auto;
+        }
+        /* min-width:50%; */
+        /* height: auto; */
         padding:1rem;
     }
 
     & > p {
         padding: 2rem;
-        font-size: 0.6rem;
+        font-size: 0.8rem;
+
+        @media(max-width:650px){    
+            order:1;
+        }
+        
         @media (min-width:580px) {
             font-size:0.8rem;
         }
@@ -51,18 +72,8 @@ const ProjectPanel = styled.article`
         }
         @media (min-width:1880px) {
             font-size:1.6rem;
-        }
-
-        
+        }  
     }
-
-
-    background: rgba(255, 255, 255, 0.22);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3.6px);
-    -webkit-backdrop-filter: blur(3.6px);
-
 `
 
 const Projects = () => {

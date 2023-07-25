@@ -1,7 +1,7 @@
 import './App.css';
 
 import React, { useState, useEffect, useSyncExternalStore } from 'react';
-
+import styled from "styled-components"
 import Waiting from './components/Waiting';
 import HeroHeader from './components/HeroHeader';
 import AboutMe from './components/AboutMe';
@@ -10,6 +10,11 @@ import Contact from './components/Contact';
 import Experience from './components/Experience';
 import ScrollNav from './components/ScrollNav';
 import Footer from './components/Footer';
+
+const MaxWidthContainer = styled.div`
+    max-width:1200px;
+    margin: 0 auto;
+`
 
 function App() {
 
@@ -33,12 +38,15 @@ function App() {
 
         <div className="App">
             {<ScrollNav show={showNav} />}
-            <HeroHeader />
-            <AboutMe />
-            <Projects />
-            <Experience />
-            <Contact />
-            <Footer />
+            <MaxWidthContainer>
+                <HeroHeader />
+                <AboutMe />
+                <Projects />
+                <Experience />
+                <Contact />
+                <Footer />
+            </MaxWidthContainer>
+
         </div>
     );
 }

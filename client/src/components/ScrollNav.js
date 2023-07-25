@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react';
+
 import styled from "styled-components";
 import { Link as ScrollLink } from 'react-scroll';
 
@@ -15,6 +17,7 @@ const ScrollNavWrapper = styled.nav`
     justify-content: space-between;
     opacity: ${props => props.show ? 1 : 0};
     transition: opacity 0.8s ease;
+    margin-right: ${props => props.marginRight};
 `
 const StyledNavLink = styled(ScrollLink)`
     background-color: white;
@@ -23,9 +26,6 @@ const StyledNavLink = styled(ScrollLink)`
     width:1rem;
     height: 1rem;
 
-
-
-    
     &.active {
         background-color: red; 
     }
@@ -74,8 +74,25 @@ const NavLink = ({ to, children }) => (
 );
 
 const ScrollNav = ({ show }) => {
+
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    //managing nav position
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+        // cleanup
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const navMarginRight = windowWidth > 1320 ? ((windowWidth - 1320) / 4) + "px" : "0px";
+
+
     return (
-        <ScrollNavWrapper show={show}>
+        <ScrollNavWrapper show={show} marginRight={navMarginRight}>
             <NavLink to="aboutme" >About</NavLink>
             <NavLink to="projects" >Projects</NavLink>
             <NavLink to="experience" >Experience</NavLink>
