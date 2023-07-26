@@ -41,7 +41,7 @@ const ProjectPanel = styled.article`
 
     & > img{
         /* width: 100%; */
-        max-width: 50%; 
+        max-width: 40%; 
         aspect-ratio:1;
         @media(max-width:650px){
             max-width:80%;

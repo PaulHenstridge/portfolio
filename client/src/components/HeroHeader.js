@@ -4,6 +4,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import PageScroll from "./PageScroll";
 
 import backgroundImage from '../assets/Kiess.jpg'
+import headshot from '../assets/headshot.png'
 
 const HeroContainer = styled.div`
     display: flex;
@@ -38,6 +39,26 @@ const StyledH1 = styled.h1`
         font-size:6rem;
     }
 `
+const HeadshotFrame = styled.div`
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background:rgb(225 246 250);  
+    outline: 3px solid rgb(96 110 125);
+
+    img { 
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        top: 60%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+    }
+    
+
+`
 
 const HeroHeader = () => {
     return (
@@ -45,11 +66,13 @@ const HeroHeader = () => {
             <Fade duration="1000" direction="down">
                 <StyledH1>Hi, I'm Paul </StyledH1>
             </Fade>
+            <HeadshotFrame>
+                <img src={headshot} alt="my face"></img>
+            </HeadshotFrame>
             <PageScroll to="aboutme" />
         </HeroContainer>
 
     )
-
 }
 
 export default HeroHeader;
