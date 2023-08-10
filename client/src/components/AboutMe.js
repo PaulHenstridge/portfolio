@@ -26,7 +26,7 @@ const InnerContainer = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
-    margin-bottom:4rem;
+    /* margin-bottom:1rem; */
     max-width:850px;
 
 `
@@ -34,7 +34,9 @@ const InnerContainer = styled.div`
 const AboutText = styled.p`
     width: 80%;
     padding: 3rem;
+    /* background-color:rgba(5,5,5,0.5); */
     font-size: 0.6rem;
+    font-weight:700;
  
     @media (min-width:580px) {
         font-size:0.8rem;
@@ -57,6 +59,7 @@ const IconsContainer = styled.aside`
     padding:3.5rem;
     border-radius:35%;
     box-shadow:inset 0px 0px 38px 18px rgb(13, 20, 34);
+    z-index:10;
 
     i {
         font-size: 1.6rem;
@@ -83,8 +86,12 @@ const AboutMe = () => {
         <>
             <AboutMeContainer id="aboutme">
                 <InnerContainer>
-                    <AboutText>About me  - Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, saepe. Cumque reprehenderit possimus illo voluptate explicabo sunt dignissimos vel eos, id nostrum quam nisi rerum sit mollitia maxime eius. Repellat.
-                        Vitae eligendi provident nobis doloribus, ut nemo rerum adipisci illum quia possimus, aperiam incidunt laboriosam. Voluptatibus totam earum quibusdam tempore aspernatur id nesciunt odit, placeat molestias eos, deserunt doloribus unde.
+                    <AboutText>An enthusiastic,  self motivated career changer with a passion for learning and solving problems.<br></br><br></br> 
+                     With a long standing interest in programming and technology, experience in management, process design, and lean methodologies,  
+I am a self taught hobby coder since 2020, graduating from CodeClan’s Professional Software Development bootcamp in 2023, where I built full stack apps in Python,
+ JavaScript and Java, developed my skills and learned industry best practice.<br></br><br></br>
+Away from the screen,  I am often found out and about exploring nature with my partner and our dog, Corrie, providing a refreshing 
+balance and contrast to the dynamic world of tech.
                     </AboutText>
                 </InnerContainer>
                 <IconsContainer>

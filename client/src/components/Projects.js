@@ -24,7 +24,7 @@ const ProjectsContainer = styled.section`
 `
 const ProjectPanel = styled.article`
     width:80%;
-    height: 40vh;
+    height: min-content;
     z-index:6;
     margin-bottom:2rem;
     display:flex;
@@ -38,9 +38,9 @@ const ProjectPanel = styled.article`
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3.6px);
     -webkit-backdrop-filter: blur(3.6px);
+    background-color:rgb(5,5,5,0.5);
 
     & > img{
-        /* width: 100%; */
         max-width: 40%; 
         aspect-ratio:1;
         @media(max-width:650px){
@@ -56,6 +56,9 @@ const ProjectPanel = styled.article`
     & > p {
         padding: 2rem;
         font-size: 0.8rem;
+        color:rgb(221, 248, 251);
+        text-shadow:0px 0px 6px black;
+        
 
         @media(max-width:650px){    
             order:1;
@@ -73,6 +76,15 @@ const ProjectPanel = styled.article`
         @media (min-width:1880px) {
             font-size:1.6rem;
         }  
+
+        & > h4{
+            margin-bottom:1rem;
+        }
+
+        & > a{
+            padding:0.8rem 1.4rem;
+            background-color: rgb(13, 20, 34);
+        }
     }
 `
 
@@ -97,18 +109,45 @@ const Projects = () => {
     return (<ProjectsContainer id="projects"  >
         <ProjectPanel>
             <img src={speakeasy} alt="speakeasy home page" />
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, ullam modi fuga recusandae aut quisquam excepturi vero. Explicabo iste autem eaque voluptate dicta rem, eligendi nobis quos tenetur a assumenda ex temporibus enim sequi sed alias minima laudantium optio commodi nostrum distinctio minus magnam.</p>
+  
+               <p> <h4> <strong>A Voice Controlled, AI Supported, Accessibility Assistant   </strong></h4>
+
+               Designed to support visually impaired and neurodivergent users with voice and keyboard commands,
+                and AI integrated support.<br></br>
+               Users can interact with the app via natural language voice commands.<br></br><br></br>
+            
+               React, Express, GPT3.5, Postgres DB with Java Spring<br></br><br></br>
+               <a href='https://github.com/PaulHenstridge/SpeakEasy-AI-A11y-Assistant'>View Source Code  <i className='devicon-github-original'></i></a>
+
+               </p>
+
+ 
         </ProjectPanel>
         <ProjectPanel>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, ullam modi fuga recusandae aut quisquam excepturi vero. Explicabo iste autem eaque voluptate dicta rem, eligendi nobis quos tenetur a assumenda ex temporibus enim sequi sed alias minima laudantium optio commodi nostrum distinctio minus magnam.</p>
+            <p><h4> <strong>A Classic 'Fruit Machine' Simulator.   </strong></h4>
+            
+            A group project, built with React, Express and MongoDB.<br></br><br></br><br></br>
+                <a href='https://github.com/PaulHenstridge/Crazy-Jackpots'>View Source Code  <i className='devicon-github-original'></i></a>
+            </p>
             <img src={slot} alt="Slot machine user interface" />
         </ProjectPanel>
         <ProjectPanel>
             <img src={knotty} alt="knotty league teams page" />
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, ullam modi fuga recusandae aut quisquam excepturi vero. Explicabo iste autem eaque voluptate dicta rem, eligendi nobis quos tenetur a assumenda ex temporibus enim sequi sed alias minima laudantium optio commodi nostrum distinctio minus magnam.</p>
+            <p><h4> <strong> Modelling of a Sports League   </strong></h4>
+                
+                Users can schedule matches and run a simulation of the match being played, generating a score and match report.
+                Results are displayed in a league table.<br></br><br></br>
+                Admin can create and delete teams, and edit attributes.<br></br>
+                Built with Python, Flask and PostgreSQL.<br></br><br></br><br></br>
+                <a href='https://github.com/PaulHenstridge/knotty_league'>View Source Code  <i className='devicon-github-original'></i></a>
+
+                </p>
         </ProjectPanel>
         <ProjectPanel>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, ullam modi fuga recusandae aut quisquam excepturi vero. Explicabo iste autem eaque voluptate dicta rem, eligendi nobis quos tenetur a assumenda ex temporibus enim sequi sed alias minima laudantium optio commodi nostrum distinctio minus magnam.</p>
+            <p><h4> <strong> Musical Loop Generator   </strong></h4>
+                Users can select the key, octave, synth type, tempo and number of simultaneously looping channels to create their track.<br></br>
+                Built with Vanilla JS and the Tone.js library<br></br><br></br><br></br>
+                <a href='https://github.com/PaulHenstridge/loop-sequencer'>View Source Code  <i className='devicon-github-original'></i></a></p>
             <img src={sequencer} alt="tone selection interface" />
         </ProjectPanel>
 

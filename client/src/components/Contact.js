@@ -52,7 +52,7 @@ const StyledButton = styled.button`
     border: 1px solid black;
     border-radius:12%;
     padding: 0.6rem 1.2rem;
-    color: #5d1def;
+    color: #e50b0b;
 `
 
 
@@ -81,7 +81,9 @@ const Contact = () => {
 
     return (
         <ContactContainer id="contact" >
+
             <StyledForm onSubmit={handleSubmit}>
+            <h1>Get in touch...</h1>
                 <InputContainer>
                     <label for="name">NAME</label>
                     <input id="name" name="name" type="text" onChange={handleChange} />

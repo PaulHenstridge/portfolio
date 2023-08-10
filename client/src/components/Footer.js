@@ -7,9 +7,9 @@ const FooterContainer = styled.footer`
 `
 const Footer = () => {
     return (<FooterContainer>
-        <h3>Footer</h3>
+        {/* <h3>Footer</h3>
         <h5>contacts, github linkedIn </h5>
-        <h6>image accreditation</h6>
+        <h6>image accreditation</h6> */}
     </FooterContainer>);
 }
 

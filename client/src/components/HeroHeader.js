@@ -45,7 +45,7 @@ const HeadshotFrame = styled.div`
     border-radius: 50%;
     overflow: hidden;
     position: relative;
-    background:rgb(225 246 250);  
+    background:rgb(225 246 300);  
     outline: 3px solid rgb(96 110 125);
 
     img { 

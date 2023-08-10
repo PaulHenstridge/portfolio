@@ -20,14 +20,15 @@ const ScrollNavWrapper = styled.nav`
     margin-right: ${props => props.marginRight};
 `
 const StyledNavLink = styled(ScrollLink)`
-    background-color: white;
+    background-color: #3ea2a9;
     cursor: pointer;
     border-radius:50%;
     width:1rem;
     height: 1rem;
+    
 
     &.active {
-        background-color: red; 
+        background-color: #e50b0b; 
     }
 `
 
@@ -35,6 +36,9 @@ const NavLinkWrapper = styled.div`
     position: relative;
     width: fit-content;
     display: flex;
+    color: #3ea2a9;
+    text-shadow:0px 0px 6px black;
+    font-size:1.4rem;
 `;
 
 const VisuallyHidden = styled.span`
