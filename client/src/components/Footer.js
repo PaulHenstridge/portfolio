@@ -4,12 +4,19 @@ const FooterContainer = styled.footer`
     background-color: rgb(13, 20, 34);
     color: whitesmoke;
     padding: 2rem;
+    display:flex;
+    justify-content:space-around;
+
+    & > a {
+        font-size: 3rem;
+        text-decoration: none;
+        cursor:pointer;
+    }
 `
 const Footer = () => {
     return (<FooterContainer>
-        {/* <h3>Footer</h3>
-        <h5>contacts, github linkedIn </h5>
-        <h6>image accreditation</h6> */}
+<a href="https://github.com/PaulHenstridge" > <i className='devicon-github-original'></i></a>
+<a href="https://www.linkedin.com/in/paul-henstridge-68221833" > <i className='devicon-linkedin-plain colored'></i></a>
     </FooterContainer>);
 }
 

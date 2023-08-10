@@ -77,8 +77,10 @@ const ProjectPanel = styled.article`
             font-size:1.6rem;
         }  
 
-        & > h4{
+        & > h3{
             margin-bottom:1rem;
+            font-family: 'Roboto Slab', serif;
+            text-decoration:underline;
         }
 
         & > a{
@@ -110,44 +112,44 @@ const Projects = () => {
         <ProjectPanel>
             <img src={speakeasy} alt="speakeasy home page" />
   
-               <p> <h4> <strong>A Voice Controlled, AI Supported, Accessibility Assistant   </strong></h4>
+               <p> <h3> <strong>A Voice Controlled, AI Supported, Accessibility Assistant   </strong></h3>
 
                Designed to support visually impaired and neurodivergent users with voice and keyboard commands,
                 and AI integrated support.<br></br>
                Users can interact with the app via natural language voice commands.<br></br><br></br>
             
                React, Express, GPT3.5, Postgres DB with Java Spring<br></br><br></br>
-               <a href='https://github.com/PaulHenstridge/SpeakEasy-AI-A11y-Assistant'>View Source Code  <i className='devicon-github-original'></i></a>
+               <a href='https://github.com/PaulHenstridge/SpeakEasy-AI-A11y-Assistant'>View Code  <i className='devicon-github-original'></i></a>
 
                </p>
 
  
         </ProjectPanel>
         <ProjectPanel>
-            <p><h4> <strong>A Classic 'Fruit Machine' Simulator.   </strong></h4>
+            <p><h3> <strong>A Classic 'Fruit Machine' Simulator.   </strong></h3>
             
             A group project, built with React, Express and MongoDB.<br></br><br></br><br></br>
-                <a href='https://github.com/PaulHenstridge/Crazy-Jackpots'>View Source Code  <i className='devicon-github-original'></i></a>
+                <a href='https://github.com/PaulHenstridge/Crazy-Jackpots'>View Code  <i className='devicon-github-original'></i></a>
             </p>
             <img src={slot} alt="Slot machine user interface" />
         </ProjectPanel>
         <ProjectPanel>
             <img src={knotty} alt="knotty league teams page" />
-            <p><h4> <strong> Modelling of a Sports League   </strong></h4>
+            <p><h3> <strong> Modelling of a Sports League   </strong></h3>
                 
                 Users can schedule matches and run a simulation of the match being played, generating a score and match report.
                 Results are displayed in a league table.<br></br><br></br>
                 Admin can create and delete teams, and edit attributes.<br></br>
                 Built with Python, Flask and PostgreSQL.<br></br><br></br><br></br>
-                <a href='https://github.com/PaulHenstridge/knotty_league'>View Source Code  <i className='devicon-github-original'></i></a>
+                <a href='https://github.com/PaulHenstridge/knotty_league'>View Code  <i className='devicon-github-original'></i></a>
 
                 </p>
         </ProjectPanel>
         <ProjectPanel>
-            <p><h4> <strong> Musical Loop Generator   </strong></h4>
+            <p><h3> <strong> Musical Loop Generator   </strong></h3>
                 Users can select the key, octave, synth type, tempo and number of simultaneously looping channels to create their track.<br></br>
                 Built with Vanilla JS and the Tone.js library<br></br><br></br><br></br>
-                <a href='https://github.com/PaulHenstridge/loop-sequencer'>View Source Code  <i className='devicon-github-original'></i></a></p>
+                <a href='https://github.com/PaulHenstridge/loop-sequencer'>View Code  <i className='devicon-github-original'></i></a></p>
             <img src={sequencer} alt="tone selection interface" />
         </ProjectPanel>
 

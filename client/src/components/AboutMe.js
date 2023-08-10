@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { devIcons } from "../assets/devicons";
 import PageScroll from "./PageScroll";
 import geltPic from "../assets/Gelt.png"
+import Tooltip from "./ToolTip";
+import corriePic from "../assets/corrie.png"
+
 
 const AboutMeContainer = styled.section`
     background-color:rgb(13, 20, 34);
@@ -45,6 +48,9 @@ const AboutText = styled.p`
         font-size:1rem;
     }
 
+    & > span {
+        font-size:1.2em;
+    }
 `
 
 const IconsContainer = styled.aside`
@@ -86,12 +92,13 @@ const AboutMe = () => {
         <>
             <AboutMeContainer id="aboutme">
                 <InnerContainer>
-                    <AboutText>An enthusiastic,  self motivated career changer with a passion for learning and solving problems.<br></br><br></br> 
+                    <AboutText> <span> An enthusiastic,  self motivated career changer with a passion for learning and solving problems.</span><br></br><br></br> 
                      With a long standing interest in programming and technology, experience in management, process design, and lean methodologies,  
 I am a self taught hobby coder since 2020, graduating from CodeClan’s Professional Software Development bootcamp in 2023, where I built full stack apps in Python,
  JavaScript and Java, developed my skills and learned industry best practice.<br></br><br></br>
-Away from the screen,  I am often found out and about exploring nature with my partner and our dog, Corrie, providing a refreshing 
-balance and contrast to the dynamic world of tech.
+Away from the screen,  I am often found out and about exploring nature with my partner and our dog     
+ <Tooltip imagePath={corriePic}>,  Corrie</Tooltip>,
+ providing a refreshing balance and contrast to the dynamic world of tech.
                     </AboutText>
                 </InnerContainer>
                 <IconsContainer>

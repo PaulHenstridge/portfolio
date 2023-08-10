@@ -53,6 +53,10 @@ const StyledButton = styled.button`
     border-radius:12%;
     padding: 0.6rem 1.2rem;
     color: #e50b0b;
+    cursor:pointer;
+    &:hover{
+        background-color:black;
+    }
 `
 
 
