@@ -86,6 +86,7 @@ const ProjectPanel = styled.article`
         & > a{
             padding:0.8rem 1.4rem;
             background-color: rgb(13, 20, 34);
+            text-decoration:none;
         }
     }
 `

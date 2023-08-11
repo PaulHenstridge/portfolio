@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Experience from './components/Experience';
 import ScrollNav from './components/ScrollNav';
 import Footer from './components/Footer';
+import StaticContact from './components/StaticContact';
 
 const MaxWidthContainer = styled.div`
     max-width:1200px;
@@ -43,7 +44,7 @@ function App() {
                 <AboutMe />
                 <Projects />
                 <Experience />
-                <Contact />
+                <StaticContact />
                 <Footer />
             </MaxWidthContainer>
 
