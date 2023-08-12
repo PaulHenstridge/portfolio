@@ -2,7 +2,6 @@ import './App.css';
 
 import React, { useState, useEffect, useSyncExternalStore } from 'react';
 import styled from "styled-components"
-import Waiting from './components/Waiting';
 import HeroHeader from './components/HeroHeader';
 import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
