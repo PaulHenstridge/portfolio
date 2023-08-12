@@ -18,14 +18,21 @@ const oauth2Client = new google.auth.OAuth2(
     'https://developers.google.com/oauthplayground' // This is the redirect URL where Google will send the authorization code
 );
 
-console.log('Refresh token:',);
-
 oauth2Client.setCredentials({
     refresh_token: process.env.OAUTH_REFRESH_TOKEN
 })
 
-const accessToken = oauth2Client.getAccessToken();
 
+let accessToken;
+async function retrieveAccessToken(){
+    try{
+        accessToken = oauth2Client.getAccessToken();
+    } catch (error) {
+        console.error("error retrieving access token")
+    }
+}
+retrieveAccessToken()
+ 
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -38,7 +45,7 @@ let transporter = nodemailer.createTransport({
     }
 });
 
-const sendMail = ({ name, senderEmail, subject, message }) => {
+const sendMail = async({ name, senderEmail, subject, message }) => {
     let mailOptions = {
         from: `${name} <${process.env.EMAIL}>`,
         replyTo: senderEmail,
@@ -46,20 +53,18 @@ const sendMail = ({ name, senderEmail, subject, message }) => {
         subject,
         text: `Message from ${name} (${senderEmail}): \n\n ${message}`
     };
+    try{
+        await transporter.sendMail(mailOptions);
+        console.log('Email sent!');
+        return true;
+    } catch (error) {
+        console.log('Error sending email:', error);
+        return false;
+    }
+}
 
-    transporter.sendMail(mailOptions, function (err, data) {
-        if (err) {
-            console.log('Error:', err);
-            return false;
-        } else {
-            console.log('Email sent!');
-            return true;
-        }
-    });
-};
-
-app.post('/send', (req, res) => {
-    const isMailSent = sendMail(req.body);
+app.post('/send', async (req, res) => {
+    const isMailSent = await sendMail(req.body);
     res.status(isMailSent ? 200 : 500).json({ success: isMailSent });
 });
 

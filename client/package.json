@@ -2,7 +2,7 @@
     "name": "portfolio",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://paulhenstridge.github.io/portfolio",
+    "homepage": "https://paulhenstridge.github.io/portfolio/client",
 
     "dependencies": {
         "@emotion/react": "^11.11.1",
