@@ -13,7 +13,7 @@ const HeroContainer = styled.div`
     align-items:center;
     background-color:#FF0;
     background-image:url(${backgroundImage});
-    background-position: left;
+    background-position: center;
     /* background-attachment: fixed; */
     padding: 8rem 0;
     height:100vh;

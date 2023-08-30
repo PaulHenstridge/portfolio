@@ -43,7 +43,8 @@ function App() {
                 <AboutMe />
                 <Projects />
                 <Experience />
-                <StaticContact />
+                {/* <StaticContact /> */}
+                <Contact/>
                 <Footer />
             </MaxWidthContainer>
 
