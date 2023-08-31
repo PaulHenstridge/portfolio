@@ -31,7 +31,7 @@ function App() {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         }
-    }, []); // Empty dependency array means this effect runs once on mount and cleanup on unmount
+    }, []); 
 
 
     return (
