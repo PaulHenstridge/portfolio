@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/portfolio/client/static/css/main.ff6da84d.css",
-    "main.js": "/portfolio/client/static/js/main.1aadc9ed.js",
-    "static/js/787.1ed0c42c.chunk.js": "/portfolio/client/static/js/787.1ed0c42c.chunk.js",
-    "static/media/tomatoes-markus-spiske.jpg": "/portfolio/client/static/media/tomatoes-markus-spiske.09f835d0d85008407cbc.jpg",
-    "static/media/postbox-kutan-ural.jpg": "/portfolio/client/static/media/postbox-kutan-ural.d33d3a0c6637b97adf10.jpg",
-    "static/media/corrie.png": "/portfolio/client/static/media/corrie.7275d18bf577bc7ef652.png",
-    "static/media/Kiess.jpg": "/portfolio/client/static/media/Kiess.a7854e083e0c0ff4d575.jpg",
-    "static/media/CodeClan.png": "/portfolio/client/static/media/CodeClan.1bcdd779918eeb932557.png",
-    "static/media/SeaSail.jpg": "/portfolio/client/static/media/SeaSail.88c6a3bf9fadec4a1126.jpg",
-    "static/media/Hillpath.jpg": "/portfolio/client/static/media/Hillpath.ae5a6da5ee98c31272a3.jpg",
-    "static/media/Gelt.png": "/portfolio/client/static/media/Gelt.b0a195f4f3d6d64c88d6.png",
-    "static/media/slot.png": "/portfolio/client/static/media/slot.1db643215d2d11f02779.png",
-    "static/media/knotty.png": "/portfolio/client/static/media/knotty.bf69719f0dc198876b97.png",
-    "static/media/headshot.png": "/portfolio/client/static/media/headshot.6d76daeca7966b75a422.png",
-    "static/media/sequencer.png": "/portfolio/client/static/media/sequencer.11ca4db3e43f43ef0603.png",
-    "static/media/speakeasy.png": "/portfolio/client/static/media/speakeasy.2b5f1600babf1b04e5bb.png",
-    "index.html": "/portfolio/client/index.html",
-    "main.ff6da84d.css.map": "/portfolio/client/static/css/main.ff6da84d.css.map",
-    "main.1aadc9ed.js.map": "/portfolio/client/static/js/main.1aadc9ed.js.map",
-    "787.1ed0c42c.chunk.js.map": "/portfolio/client/static/js/787.1ed0c42c.chunk.js.map"
+    "main.css": "/portfolio/static/css/main.7d494b9c.css",
+    "main.js": "/portfolio/static/js/main.47513961.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/tomatoes-markus-spiske.jpg": "/portfolio/static/media/tomatoes-markus-spiske.09f835d0d85008407cbc.jpg",
+    "static/media/postbox-kutan-ural.jpg": "/portfolio/static/media/postbox-kutan-ural.d33d3a0c6637b97adf10.jpg",
+    "static/media/corrie.png": "/portfolio/static/media/corrie.7275d18bf577bc7ef652.png",
+    "static/media/Kiess.jpg": "/portfolio/static/media/Kiess.a7854e083e0c0ff4d575.jpg",
+    "static/media/CodeClan.png": "/portfolio/static/media/CodeClan.1bcdd779918eeb932557.png",
+    "static/media/SeaSail.jpg": "/portfolio/static/media/SeaSail.88c6a3bf9fadec4a1126.jpg",
+    "static/media/Hillpath.jpg": "/portfolio/static/media/Hillpath.ae5a6da5ee98c31272a3.jpg",
+    "static/media/Gelt.png": "/portfolio/static/media/Gelt.b0a195f4f3d6d64c88d6.png",
+    "static/media/slot.png": "/portfolio/static/media/slot.1db643215d2d11f02779.png",
+    "static/media/knotty.png": "/portfolio/static/media/knotty.bf69719f0dc198876b97.png",
+    "static/media/headshot.png": "/portfolio/static/media/headshot.6d76daeca7966b75a422.png",
+    "static/media/sequencer.png": "/portfolio/static/media/sequencer.11ca4db3e43f43ef0603.png",
+    "static/media/speakeasy.png": "/portfolio/static/media/speakeasy.2b5f1600babf1b04e5bb.png",
+    "index.html": "/portfolio/index.html",
+    "main.7d494b9c.css.map": "/portfolio/static/css/main.7d494b9c.css.map",
+    "main.47513961.js.map": "/portfolio/static/js/main.47513961.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff6da84d.css",
-    "static/js/main.1aadc9ed.js"
+    "static/css/main.7d494b9c.css",
+    "static/js/main.47513961.js"
   ]
 }
