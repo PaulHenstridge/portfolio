@@ -8,7 +8,9 @@ const EmailLink = styled.h2`
         color:red;
     }
 `
-
+const ContactIcon = styled.i`
+    display:none;
+`
 const StaticContact = () => {
     return (  <>
     <EmailLink>I'd love to hear from you! <br></br> Please <a href="mailto:paulhenstridge@gmail.com"> drop me an email,</a> or use the links below</EmailLink>
