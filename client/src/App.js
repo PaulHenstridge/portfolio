@@ -42,8 +42,8 @@ function App() {
                 <HeroHeader />
                 <AboutMe />
                 <Projects />
-                <Experience />
-                {/* <StaticContact /> */}
+                {/* <Experience /> */}
+                <StaticContact />
                 <Contact/>
                 <Footer />
             </MaxWidthContainer>
