@@ -16,7 +16,7 @@ const FooterContainer = styled.footer`
 const Footer = () => {
     return (<FooterContainer>
 <a href="https://github.com/PaulHenstridge" > <i className='devicon-github-original'></i></a>
-<a href="https://www.linkedin.com/in/paul-henstridge-68221833" > <i className='devicon-linkedin-plain colored'></i></a>
+<a href="https://www.linkedin.com/in/paul-henstridge" > <i className='devicon-linkedin-plain colored'></i></a>
     </FooterContainer>);
 }
 
