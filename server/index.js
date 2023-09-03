@@ -72,13 +72,14 @@
 //     console.log(`Server is running on port ${PORT}`);
 // });
 
-
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const { google } = require('googleapis');
-require('dotenv').config();
+
+console.log("Refresh Token from .env:", process.env.OAUTH_REFRESH_TOKEN);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -87,14 +88,14 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-console.log('Refresh Token:', process.env.OAUTH_REFRESH_TOKEN);
-
 
 const oauth2Client = new google.auth.OAuth2(
     process.env.OAUTH_CLIENT_ID,
     process.env.OAUTH_CLIENT_SECRET,
     'https://developers.google.com/oauthplayground'
 );
+
+oauth2Client.setCredentials({ refresh_token: process.env.OAUTH_REFRESH_TOKEN });
 
 async function retrieveAccessToken() {
     try {
