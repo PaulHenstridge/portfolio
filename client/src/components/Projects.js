@@ -5,7 +5,7 @@ import PageScroll from "./PageScroll";
 import hillPath from "../assets/Hillpath.jpg"
 import knotty from "../assets/knotty.png"
 import speakeasy from "../assets/speakeasy.png"
-import slot from "../assets/slot.png"
+import quincy from "../assets/quincy_api.png"
 import sequencer from "../assets/sequencer.png"
 
 
@@ -123,17 +123,21 @@ const Projects = () => {
                <a href='https://github.com/PaulHenstridge/SpeakEasy-AI-A11y-Assistant'>View Code  <i className='devicon-github-original'></i></a>
 
                </p>
+        </ProjectPanel>
 
- 
-        </ProjectPanel>
         <ProjectPanel>
-            <p><h3> <strong>A Classic 'Fruit Machine' Simulator.   </strong></h3>
+            <p><h3> <strong>Quincy API - Articles and learning materials </strong></h3>
             
-            A group project, built with React, Express and MongoDB.<br></br><br></br><br></br>
-                <a href='https://github.com/PaulHenstridge/Crazy-Jackpots'>View Code  <i className='devicon-github-original'></i></a>
+            An API repository of links and resources shared in Quincy Larson of freeCodeCamp's weekly emails.<br></br><br></br>
+            AI generated content tags for in depth searching.  A simple front end to test API and view results.
+            <br></br><br></br>
+            Python, Flask, MongoDB, JavaScript, GPT3.5, BeautifulSoup
+            <br></br><br></br>
+                <a href='https://github.com/PaulHenstridge/Quincy_API'>View Code  <i className='devicon-github-original'></i></a>
             </p>
-            <img src={slot} alt="Slot machine user interface" />
+            <img src={quincy} alt="API front end and endpoints" />
         </ProjectPanel>
+
         <ProjectPanel>
             <img src={knotty} alt="knotty league teams page" />
             <p><h3> <strong> Modelling of a Sports League   </strong></h3>
@@ -146,6 +150,7 @@ const Projects = () => {
 
                 </p>
         </ProjectPanel>
+
         <ProjectPanel>
             <p><h3> <strong> Musical Loop Generator   </strong></h3>
                 Users can select the key, octave, synth type, tempo and number of simultaneously looping channels to create their track.<br></br>
