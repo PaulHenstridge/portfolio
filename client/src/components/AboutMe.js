@@ -49,7 +49,7 @@ const AboutText = styled.p`
     }
 
     & > span {
-        font-size:1.2em;
+        font-size:1.4em;
     }
 `
 
@@ -93,12 +93,12 @@ const AboutMe = () => {
             <AboutMeContainer id="aboutme">
                 <InnerContainer>
                     <AboutText> <span> An enthusiastic,  self motivated career changer with a passion for learning and solving problems.</span><br></br><br></br> 
-                     With a long standing interest in programming and technology, experience in management, process design, and lean methodologies,  
-I am a self taught hobby coder since 2020, graduating from CodeClan’s Professional Software Development bootcamp in 2023, where I built full stack apps in Python,
- JavaScript and Java, developed my skills and learned industry best practice.<br></br><br></br>
-Away from the screen,  I am often found out and about exploring nature with my partner and our dog     
- <Tooltip imagePath={corriePic}>,  Corrie</Tooltip>,
- providing a refreshing balance and contrast to the dynamic world of tech.
+                     With a keen interest in technology, experience in management, process design, and lean methodologies,  
+I began as a self taught hobby coder in 2020, graduating from CodeClan’s Professional Software Development bootcamp in 2023, where I learned 
+the skills and processes required to turn my hobby into a careeer. <br></br><br></br>
+Away from the screen,  I love to get out into nature with my partner and our dog     
+ <Tooltip imagePath={corriePic}>,  Corrie</Tooltip>, which fuels my creativity and
+ inspiration, as well as offering a refreshing contrast to the dynamic world of tech.
                     </AboutText>
                 </InnerContainer>
                 <IconsContainer>

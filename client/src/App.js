@@ -10,6 +10,10 @@ import Experience from './components/Experience';
 import ScrollNav from './components/ScrollNav';
 import Footer from './components/Footer';
 import StaticContact from './components/StaticContact';
+import SpeakeasyInfo from './components/SpeakeasyInfo';
+import QuincyInfo from './components/QuincyInfo';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const MaxWidthContainer = styled.div`
     max-width:1200px;
@@ -36,17 +40,24 @@ function App() {
     return (
 
         <div className="App">
-            {<ScrollNav show={showNav} />}
-            <MaxWidthContainer>
+            <Router> 
+                {<ScrollNav show={showNav} />}
+                <MaxWidthContainer>
                 <HeroHeader />
                 <AboutMe />
-                <Projects />
+                <Routes>
+                    <Route path="/" element={<Projects />} />
+                    <Route path="/projects/speakeasy" element={<SpeakeasyInfo />} />
+                    <Route path="/projects/quincy" element={<QuincyInfo />} />
+                    {/* ... other routes for different project details */}
+                </Routes>
+                {/* <Projects /> */}
                 <Experience />
                 <StaticContact />
                 {/* <Contact/> */}
                 <Footer />
-            </MaxWidthContainer>
-
+                </MaxWidthContainer>
+            </Router>
         </div>
     );
 }

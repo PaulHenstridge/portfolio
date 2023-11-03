@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import styled from "styled-components";
 import PageScroll from "./PageScroll";
@@ -7,6 +8,7 @@ import knotty from "../assets/knotty.png"
 import speakeasy from "../assets/speakeasy.png"
 import quincy from "../assets/quincy_api.png"
 import sequencer from "../assets/sequencer.png"
+
 
 
 const ProjectsContainer = styled.section`
@@ -120,6 +122,7 @@ const Projects = () => {
                Users can interact with the app via natural language voice commands.<br></br><br></br>
             
                React, Express, GPT3.5, Postgres DB with Java Spring<br></br><br></br>
+               <Link to="/projects/speakeasy">Learn More</Link>
                <a href='https://github.com/PaulHenstridge/SpeakEasy-AI-A11y-Assistant'>View Code  <i className='devicon-github-original'></i></a>
 
                </p>
@@ -133,6 +136,7 @@ const Projects = () => {
             <br></br><br></br>
             Python, Flask, MongoDB, JavaScript, GPT3.5, BeautifulSoup
             <br></br><br></br>
+                <Link to="/projects/quincy">Learn More</Link>
                 <a href='https://github.com/PaulHenstridge/Quincy_API'>View Code  <i className='devicon-github-original'></i></a>
             </p>
             <img src={quincy} alt="API front end and endpoints" />
