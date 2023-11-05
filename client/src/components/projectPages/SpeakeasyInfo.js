@@ -2,17 +2,27 @@ import styled from "styled-components";
 import {Link} from "react-router-dom"
 import DemoVid from "./DemoVid";
 
+import contextDiagram from "../../assets/projectImages/contextDiagram.png"
+import appComponent from "../../assets/projectImages/AppComponent.png"
+
 
 
 const Bg = styled.div`
     background-color: black;
     color:yellow;
+    & > h1 {
+      font-size:2.6rem;
+      /* margin: 1.6rem; */
+      padding: 2rem;
+
+    }
 `
 
 const UpperContainer = styled.div`
     display: flex;
+    flex-wrap:nowrap;
     & > div {
-      flex: 1;
+      /* flex: 1; */
     }
 `
 const LowerContainer = styled.div`
@@ -37,12 +47,13 @@ const HeaderP = styled.p`
 `
 
 
-const VideoContainer = styled.div`
-    border: 4px solid yellow;
-    aspect-ratio: 16/9;
-    flex: 0 0 40%;
-    height: auto;
-`
+// const VideoContainer = styled.div`
+//     border: 4px solid yellow;
+//     aspect-ratio: 16/9;
+//     width: 40%;
+//     flex:none;
+//     align-self: flex-start;
+// `
 
 const SpeakeasyInfo = () => {
     return (<Bg>
@@ -61,7 +72,7 @@ const SpeakeasyInfo = () => {
             </HeaderP>
         </div>
    
-      <VideoContainer> <DemoVid/> </VideoContainer>
+      <DemoVid/> 
 
       </UpperContainer>
 
@@ -90,7 +101,7 @@ const SpeakeasyInfo = () => {
           <p><h5>How has this project helped me grow as a developer?</h5>  
           It gave me the chance to dig deeper into React’s Context API in this project.  Some components required access to the speech-to-text API to process voice input,
            while others required Speech Synthesis functionality to return audible output,  and others required a websocket connection to communicate with the back end,
-            while all components were subject to theme toggling.  Using contexts to provide this state made the app so much cleaner and easier to work with.
+            while all components were subject to theme toggling. <img src={contextDiagram} alt="Context diagram"></img> Using contexts to provide this state made the app so much cleaner and easier to work with.
               It also makes it so much easier to extend the project, as any components rendered within a given context can have access to that state. </p>
 
          <p>  It was also great to learn more about digital accessibility, including the use and expectations of screen readers, creating high contrast visual designs, and implementing full keyboard navigation.
