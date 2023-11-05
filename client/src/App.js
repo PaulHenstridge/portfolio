@@ -10,8 +10,8 @@ import Experience from './components/Experience';
 import ScrollNav from './components/ScrollNav';
 import Footer from './components/Footer';
 import StaticContact from './components/StaticContact';
-import SpeakeasyInfo from './components/SpeakeasyInfo';
-import QuincyInfo from './components/QuincyInfo';
+import SpeakeasyInfo from './components/projectPages/SpeakeasyInfo';
+import QuincyInfo from './components/projectPages/QuincyInfo';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
