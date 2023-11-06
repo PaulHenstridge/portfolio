@@ -6,6 +6,19 @@ import PageScroll from "./PageScroll";
 import backgroundImage from '../assets/Kiess.jpg'
 import headshot from '../assets/headshot.png'
 
+import { keyframes } from "@emotion/react";
+import { Reveal } from "react-awesome-reveal";
+
+const SimpleFadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+
 const HeroContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -66,9 +79,16 @@ const HeroHeader = () => {
             <Fade duration="1000" direction="down">
                 <StyledH1>Hi, I'm Paul </StyledH1>
             </Fade>
-            <HeadshotFrame>
+            <Reveal keyframes={SimpleFadeIn} duration={3200}>
+                <div>
+                <h1> Software Developer</h1>
+                <h2>JavaScript|Python|Java</h2>
+                </div>
+        
+            </Reveal>
+            {/* <HeadshotFrame>
                 <img src={headshot} alt="my face"></img>
-            </HeadshotFrame>
+            </HeadshotFrame> */}
             <PageScroll to="aboutme" />
         </HeroContainer>
 

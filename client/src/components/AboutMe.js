@@ -3,7 +3,7 @@ import { devIcons } from "../assets/devicons";
 import PageScroll from "./PageScroll";
 import geltPic from "../assets/Gelt.png"
 import Tooltip from "./ToolTip";
-import corriePic from "../assets/corrie.png"
+import corriePic from "../assets/corrie.jpg"
 
 
 const AboutMeContainer = styled.section`
@@ -93,8 +93,8 @@ const AboutMe = () => {
             <AboutMeContainer id="aboutme">
                 <InnerContainer>
                     <AboutText> <span> An enthusiastic,  self motivated career changer with a passion for learning and solving problems.</span><br></br><br></br> 
-                     With a keen interest in technology, experience in management, process design, and lean methodologies,  
-I began as a self taught hobby coder in 2020, graduating from CodeClan’s Professional Software Development bootcamp in 2023, where I learned 
+                     With experience in management, lean methodologies and process design, 
+I began as a self taught hobby coder in 2020, graduating from CodeClan’s Professional Software Development bootcamp in 2023, where I developed 
 the skills and processes required to turn my hobby into a careeer. <br></br><br></br>
 Away from the screen,  I love to get out into nature with my partner and our dog     
  <Tooltip imagePath={corriePic}>,  Corrie</Tooltip>, which fuels my creativity and

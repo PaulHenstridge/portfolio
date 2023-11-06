@@ -69,17 +69,15 @@ const HeaderP = styled.p`
 
 const SpeakeasyInfo = () => {
     return (<Bg>
-      <h1>SpeakEasy Accessibillity Assistant</h1>
+      <h1>SpeakEasy</h1>
       
       <UpperContainer>
         <div> 
-            <HeaderP> The purpose of the SpeakEasy project was to explore the potential of AI to create a more friendly and intuitive user experience, 
-              particularly for those users with different visual or cognitive requirements.  
-           </HeaderP>   
-            <HeaderP>   SpeakEasy aims to "round the sharp edges" of the user experience, providing a soft link between the user 
+            <HeaderP>   SpeakEasy is an AI supported productivity assistant designed to 'smooth the sharp edges' of the digital experience, particularly for users with additional accessibility requirements, providing a soft interface between the user 
              and the machine.
              </HeaderP>
-           <HeaderP>   It interprets the users natural speech, then passes a JavaScript readable response to the application to carry out the request.
+           <HeaderP>   SpeakEasy interprets the users natural speech patterns to execute predefined opertions within the users digital environment.
+      
             </HeaderP>
         </div>
    
@@ -92,6 +90,12 @@ const SpeakeasyInfo = () => {
       <LowerContainer>
       
         < InfoSection >
+        <p> The aim of the SpeakEasy project was to explore the potential of AI to create a more friendly and intuitive user experience, 
+              particularly for those users with specific visual or cognitive requirements. 
+              
+              More what it does and why...
+               </p>
+
           <h3>Technical Considerations</h3>
 
           <p>Although primarily a JavaScript project, I chose to use Java Spring to manage the database API, having recently studied Spring
@@ -109,7 +113,7 @@ const SpeakeasyInfo = () => {
    to cleanly connect these services to the components that require them.  UseContext is also deployed,
     in combination with styledComponents theme provider, to give the user different visual options for accessibility. </p>
 
-    <p>The diagram to the right shows the flow of data within the application, from the users spoken command, 
+    <p>The diagram to the left shows the flow of data within the application, from the users spoken command, 
       via websockets to the AI model, onwards to the data handler and then returned to the front end
       where an action is initialised and user receives visible and audable response.</p>
         </InfoSection>
@@ -117,7 +121,8 @@ const SpeakeasyInfo = () => {
         < InfoSection >
           <h3>Professional Development</h3>
 
-          <p><h5>How has this project helped me grow as a developer?</h5>  
+          <p><h4>How has this project helped me grow as a developer?</h4>  
+          <h5>State and Context</h5>
           This project was the perfect opportunity explore the useContext hook and learn more about managing state across
            multiple components. The digram below illustrates how four seperate contexts are used to provide unrelated components with the data they require.
             </p> <img src={contextDiagram} alt="context diagram"></img><p>  Some components required access to the speech-to-text API to process voice input,
@@ -125,12 +130,13 @@ const SpeakeasyInfo = () => {
             while all components were subject to theme toggling. <br></br> Using contexts to provide this state made the app so much cleaner and easier to work with.
               It also makes it so much easier to extend the project, as any components rendered within a given context can have access to that state. </p>
              
-*******  ADD CONTECT DIAGRAM AND APP COMPONENT CODE  ******************
-         <p>  It was also great to learn more about digital accessibility, including the use and expectations of screen readers, creating high contrast visual designs, and implementing full keyboard navigation.
+         <p> <h5>Accessibility</h5> It was also great to learn more about digital accessibility, including the use and expectations of screen readers, creating high contrast visual designs, and implementing full keyboard navigation.
             <br></br> I have a much clearer understanding of the problems faced by a great many people in accessing the digital world,
              and it was really exciting to leverage a new technology to create solutions that could help people realise their potential.</p>
            
-           <p>Websockets</p>
+           <p><h5> web sockets</h5>
+
+I chose to use web sockets to connect the front and back end for three reasons.  The first reason was to make the chat-response experience as natural as possible.  The second was to allow more opportunities for extension.  Being able to maintain multiple live connections simultaneously offers many exciting possibilities.  The third reason is they sounded like a really cool piece of technology, that would be fun to learn about and deploy!</p>
 
           <p> <h5>What were the hardest problems to overcome?</h5>The trickiest parts of the project were, on one hand, to persuade the AI model to return its response in a predictable, JS readable format, and on the other hand, to handle the error when it failed to do so.  After numerous iterations, a system prompt was developed which successfully launched the correct font end process about 99% of there time.  To handle the remaining 1%, with the time and resources available, the non JS readable response is returned as a conversation message, avoiding an error on the back end an unresponsive front end.</p>
 
