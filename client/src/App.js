@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import StaticContact from './components/StaticContact';
 import SpeakeasyInfo from './components/projectPages/SpeakeasyInfo';
 import QuincyInfo from './components/projectPages/QuincyInfo';
+import KnottyInfo from './components/projectPages/KnottyInfo';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -49,6 +50,7 @@ function App() {
                     <Route path="/" element={<Projects />} />
                     <Route path="/projects/speakeasy" element={<SpeakeasyInfo />} />
                     <Route path="/projects/quincy" element={<QuincyInfo />} />
+                    <Route path="/projects/knotty" element={<KnottyInfo />} />
                     {/* ... other routes for different project details */}
                 </Routes>
                 {/* <Projects /> */}

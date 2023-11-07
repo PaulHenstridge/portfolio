@@ -150,16 +150,19 @@ const Projects = () => {
                 Results are displayed in a league table.<br></br><br></br>
                 Admin can create and delete teams, and edit attributes.<br></br>
                 Built with Python, Flask and PostgreSQL.<br></br><br></br><br></br>
+                <Link to="/projects/knotty">Learn More</Link>
+
                 <a href='https://github.com/PaulHenstridge/knotty_league'>View Code  <i className='devicon-github-original'></i></a>
 
                 </p>
         </ProjectPanel>
 
         <ProjectPanel>
-            <p><h3> <strong> Musical Loop Generator   </strong></h3>
-                Users can select the key, octave, synth type, tempo and number of simultaneously looping channels to create their track.<br></br>
-                Built with Vanilla JS and the Tone.js library<br></br><br></br><br></br>
+            <p><h3> <strong> Yahtzee ######   </strong></h3>
+           #### to add .... ### 
                 <a href='https://github.com/PaulHenstridge/loop-sequencer'>View Code  <i className='devicon-github-original'></i></a></p>
+                <Link to="/projects/yahtzee">Learn More</Link>
+
             <img src={sequencer} alt="tone selection interface" />
         </ProjectPanel>
 

@@ -30,7 +30,15 @@ const Bg = styled.div`
       font-size:3rem;
     }
     }
-    &  img:nth-child(odd) {
+    & img {
+      min-width: 400px;
+      @media screen and (max-width:780px) {
+        max-width: 100%;
+      }
+    }
+
+    @media screen and (min-width:781px) {
+        &  img:nth-child(odd) {
       float: left;
       max-width:40%;
       margin:1rem;
@@ -40,6 +48,8 @@ const Bg = styled.div`
       max-width:40%;
       margin:1rem;
     }
+    }
+  
 
     & h3 {
       color:#DAE34F;
@@ -92,6 +102,7 @@ const InfoSection = styled.section`
       font-size: 1.2rem;
       @media screen and (max-width:700px){
       font-size:1rem;
+      min-width: 18ch;
       }
     }
   
@@ -113,13 +124,12 @@ const HeaderP = styled.p`
 `
 const ReturnLink = styled(Link)`
   font-size:2rem;
-  color: #e40c0c;
+  color:#3ea2a9 ;
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
   &:hover {
-    color: #6b0e0c;
-    text-shadow:1px 1px rgba(255,255, 55, 0.2 );
+    color: #e40c0c; 
   }
 `
 
@@ -129,7 +139,9 @@ const SpeakeasyInfo = () => {
       
       <UpperContainer>
         <div> 
-            <HeaderP>   SpeakEasy is an AI supported productivity assistant designed to 'smooth the sharp edges' of the digital experience, particularly for users with additional accessibility requirements, providing a soft interface between the user 
+            <HeaderP>   
+              SpeakEasy is an AI supported productivity assistant designed to 'smooth the sharp edges' of the digital experience,
+               particularly for users with additional accessibility requirements, providing a soft interface between the user 
              and the machine.
              </HeaderP>
         </div>
@@ -158,9 +170,9 @@ const SpeakeasyInfo = () => {
   that can be passed to the AI on the back end,
    and speech-synthesis to convert the string responses back into audible speech for the user.   The useContext API is used 
    to cleanly connect these services to the components that require them.  UseContext is also deployed,
-    in combination with styledComponents theme provider, to give the user different visual options for accessibility. </p>
+    in combination with styledComponents theme provider, to give the user different visual theme options for accessibility. </p>
 
-    <p>The diagram to the left shows the flow of data within the application, from the users spoken command, 
+    <p>The diagram shows the flow of data within the application, from the users spoken command, 
       via websockets to the AI model, onwards to the data handler and then returned to the front end
       where an action is initialised and user receives visible and audable response.</p>
         </InfoSection>
@@ -199,6 +211,8 @@ I chose to use web sockets to connect the front and back end for three reasons. 
 
         < InfoSection >
           <h3>Next Steps</h3>
+
+
           <p><h5>Error Handling </h5>  
           More robust AI response error handling is required, as the current workaround only avoids 
           errors and non-responsive behaviour.  A separate API stream for managing errors would be 
