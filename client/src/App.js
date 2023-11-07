@@ -13,6 +13,7 @@ import StaticContact from './components/StaticContact';
 import SpeakeasyInfo from './components/projectPages/SpeakeasyInfo';
 import QuincyInfo from './components/projectPages/QuincyInfo';
 import KnottyInfo from './components/projectPages/KnottyInfo';
+import YahtzeeInfo from './components/projectPages/YahtzeeInfo';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -51,7 +52,7 @@ function App() {
                     <Route path="/projects/speakeasy" element={<SpeakeasyInfo />} />
                     <Route path="/projects/quincy" element={<QuincyInfo />} />
                     <Route path="/projects/knotty" element={<KnottyInfo />} />
-                    {/* ... other routes for different project details */}
+                    <Route path="/projects/yahtzee" element={<YahtzeeInfo />} />
                 </Routes>
                 {/* <Projects /> */}
                 <Experience />

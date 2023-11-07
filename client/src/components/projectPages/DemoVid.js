@@ -5,11 +5,11 @@ const VideoContainer = styled.div`
     aspect-ratio: 16/9;
     width: 40%;
     flex:none;
-    /* align-self: flex-start; */
+    align-self: flex-start;
 `
 
 const Sh1 = styled.h1`
- color: red;
+ color: black;
 `
 
 const DemoVid = (url) => {

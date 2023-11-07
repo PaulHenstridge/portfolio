@@ -159,9 +159,10 @@ const Projects = () => {
 
         <ProjectPanel>
             <p><h3> <strong> Yahtzee ######   </strong></h3>
-           #### to add .... ### 
+           <Link to="/projects/yahtzee">Learn More</Link>
                 <a href='https://github.com/PaulHenstridge/loop-sequencer'>View Code  <i className='devicon-github-original'></i></a></p>
-                <Link to="/projects/yahtzee">Learn More</Link>
+                
+               
 
             <img src={sequencer} alt="tone selection interface" />
         </ProjectPanel>

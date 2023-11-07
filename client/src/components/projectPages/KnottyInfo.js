@@ -7,8 +7,8 @@ import DemoVid from "./DemoVid";
 
 
 const Bg = styled.div`
-    background-color: #464555;
-    color:#ABA9BB;
+    background-color: #402E32;
+    color:#BCA79D;
     padding: 0 5rem;
     @media screen and (max-width:700px){
       padding: 0 3rem;
@@ -20,7 +20,7 @@ const Bg = styled.div`
       font-size:5rem;
       /* margin: 1.6rem; */
       padding: 2rem;
-      color:#007449;
+      color:#EF6700;
       @media screen and (max-width:600px){
       font-size:4rem;
     }
@@ -50,21 +50,21 @@ const Bg = styled.div`
   
 
     & h3 {
-      color:#007449;
+      color:#EF6700;
       font-size:2rem;
       @media screen and (max-width:700px){
       font-size:1.6rem;
       }
     }
     & h4 {
-      color:#00AB79;
+      color:#D89F80;
       font-size:1.4rem;
       @media screen and (max-width:700px){
       font-size:1.1rem;
       }
     }
     & h5 {
-      color:#7A84FF;
+      color:#DFE0DF;
       font-weight:bold;
     }
 
@@ -112,7 +112,7 @@ const HeaderP = styled.p`
     margin: 0.8rem;
     text-align: justify;
       hyphens: auto;
-      color: #7A84FF;
+      color: #D89F80;
     @media screen and (max-width:1130px){
       font-size:1.4rem;
     }
