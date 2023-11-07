@@ -17,15 +17,16 @@ const Bg = styled.div`
       padding: 0 1.5rem;
     }
     & > h1 {
-      font-size:5rem;
+      font-size:4.6rem;
       /* margin: 1.6rem; */
       padding: 2rem;
       color:#EF6700;
+      line-height:1.2;
       @media screen and (max-width:600px){
-      font-size:4rem;
+      font-size:3.6rem;
     }
       @media screen and (max-width:420px){
-      font-size:3rem;
+      font-size:2.6rem;
     }
     }
     & img {
@@ -111,7 +112,8 @@ const HeaderP = styled.p`
     font-weight:bold;
     margin: 0.8rem;
     text-align: justify;
-      hyphens: auto;
+    line-height:1.4;
+      /* hyphens: auto; */
       color: #D89F80;
     @media screen and (max-width:1130px){
       font-size:1.4rem;
@@ -138,8 +140,8 @@ const KnottyInfo = () => {
       <UpperContainer>
         <div> 
             <HeaderP>   
-            Knotty is a fast, furious, often brutal sport only played in one small fishing community in the remote Scottish Highlands.
-            This full stack Python application simulates the management of the tournament. Arrange matches, play simulated games, try to top the leader board!
+            Knotty is a fast, ferocious sport played in the remote fishing communities of the Scottish Highlands.<br></br><br></br>
+            Knotty Chsmpionship Manager simulates the management of a knotty tournament. Arrange matches, play simulated games, try to top the leader board!
 
              </HeaderP>
         </div>

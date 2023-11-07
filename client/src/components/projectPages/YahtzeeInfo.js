@@ -111,7 +111,7 @@ const HeaderP = styled.p`
     font-weight:bold;
     margin: 0.8rem;
     text-align: justify;
-      hyphens: auto;
+    line-height:1.4;
       color: #4EC9B0;
     @media screen and (max-width:1130px){
       font-size:1.4rem;

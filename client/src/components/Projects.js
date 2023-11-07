@@ -129,10 +129,11 @@ const Projects = () => {
         </ProjectPanel>
 
         <ProjectPanel>
-            <p><h3> <strong>Quincy API - Articles and learning materials </strong></h3>
+            <p><h3> <strong>Quincy API </strong></h3>
             
-            An API repository of links and resources shared in Quincy Larson of freeCodeCamp's weekly emails.<br></br><br></br>
+            An API serving software development links and resources. <br></br><br></br>
             AI generated content tags for in depth searching.  A simple front end to test API and view results.
+            Content originally shared by Quincy Larson (freeCodeCamp) weekly emails.
             <br></br><br></br>
             Python, Flask, MongoDB, JavaScript, GPT3.5, BeautifulSoup
             <br></br><br></br>
@@ -144,12 +145,10 @@ const Projects = () => {
 
         <ProjectPanel>
             <img src={knotty} alt="knotty league teams page" />
-            <p><h3> <strong> Modelling of a Sports League   </strong></h3>
+            <p><h3> <strong> Knotty Championship Manager   </strong></h3>
                 
-                Users can schedule matches and run a simulation of the match being played, generating a score and match report.
-                Results are displayed in a league table.<br></br><br></br>
-                Admin can create and delete teams, and edit attributes.<br></br>
-                Built with Python, Flask and PostgreSQL.<br></br><br></br><br></br>
+                League management simulator.  Full Stack app with Python, Flask, and PostgreSQL<br></br><br></br>
+                <br></br><br></br><br></br>
                 <Link to="/projects/knotty">Learn More</Link>
 
                 <a href='https://github.com/PaulHenstridge/knotty_league'>View Code  <i className='devicon-github-original'></i></a>
