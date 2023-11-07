@@ -11,7 +11,7 @@ const ScrollNavWrapper = styled.nav`
     height: 40vh;
     z-index:10;
     background-color: transparent;
-    padding: 1rem;
+    padding: 0.4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -92,7 +92,7 @@ const ScrollNav = ({ show }) => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const navMarginRight = windowWidth > 1320 ? ((windowWidth - 1320) / 4) + "px" : "0px";
+    const navMarginRight = windowWidth > 1220 ? ((windowWidth - 1220) / 4) + "px" : "0px";
 
 
     return (

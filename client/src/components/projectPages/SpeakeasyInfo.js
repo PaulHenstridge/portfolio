@@ -9,12 +9,26 @@ import projectDiagram from "../../assets/projectImages/projectDiagram.png"
 
 
 const Bg = styled.div`
-    background-color: black;
-    color:yellow;
+    background-color: #005248;
+    color:#F2FEDC;
+    padding: 0 5rem;
+    @media screen and (max-width:700px){
+      padding: 0 3rem;
+    }
+    @media screen and (max-width:500px){
+      padding: 0 1.5rem;
+    }
     & > h1 {
-      font-size:2.6rem;
+      font-size:5rem;
       /* margin: 1.6rem; */
       padding: 2rem;
+      color:#DAE34F;
+      @media screen and (max-width:600px){
+      font-size:4rem;
+    }
+      @media screen and (max-width:420px){
+      font-size:3rem;
+    }
     }
     &  img:nth-child(odd) {
       float: left;
@@ -27,45 +41,87 @@ const Bg = styled.div`
       margin:1rem;
     }
 
+    & h3 {
+      color:#DAE34F;
+      font-size:2rem;
+      @media screen and (max-width:700px){
+      font-size:1.6rem;
+      }
+    }
+    & h4 {
+      color:#A7A76F;
+      font-size:1.4rem;
+      @media screen and (max-width:700px){
+      font-size:1.1rem;
+      }
+    }
+    & h5 {
+      color:#a1a1a1;
+      font-weight:bold;
+    }
+
 `
 
 const UpperContainer = styled.div`
     display: flex;
     flex-wrap:nowrap;
-    & > div {
-      /* flex: 1; */
+    @media screen and (max-width:1020px) {
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      div:nth-child(2){
+        align-self:center;
+        min-width:370px;
+        min-height:210px;
+      }
+      
+    
     }
 `
 const LowerContainer = styled.div`
     display: flex;
     flex-direction: column;
-
 `
 
 const InfoSection = styled.section`
     background-color: transparent;
-    & > p{
+    &  p{
       margin: 1rem;
       text-align: justify;
       hyphens: auto;
+      font-size: 1.2rem;
+      @media screen and (max-width:700px){
+      font-size:1rem;
+      }
     }
-
+  
 `
+
 const HeaderP = styled.p`
-    font-size:1.4rem;
+    font-size:1.6rem;
+    font-weight:bold;
     margin: 0.8rem;
     text-align: justify;
       hyphens: auto;
+      color: #A7A76F;
+    @media screen and (max-width:1130px){
+      font-size:1.4rem;
+    }
+    @media screen and (max-width:700px){
+      font-size:1.2rem;
+    }
 `
-
-
-// const VideoContainer = styled.div`
-//     border: 4px solid yellow;
-//     aspect-ratio: 16/9;
-//     width: 40%;
-//     flex:none;
-//     align-self: flex-start;
-// `
+const ReturnLink = styled(Link)`
+  font-size:2rem;
+  color: #e40c0c;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: #6b0e0c;
+    text-shadow:1px 1px rgba(255,255, 55, 0.2 );
+  }
+`
 
 const SpeakeasyInfo = () => {
     return (<Bg>
@@ -76,24 +132,15 @@ const SpeakeasyInfo = () => {
             <HeaderP>   SpeakEasy is an AI supported productivity assistant designed to 'smooth the sharp edges' of the digital experience, particularly for users with additional accessibility requirements, providing a soft interface between the user 
              and the machine.
              </HeaderP>
-           <HeaderP>   SpeakEasy interprets the users natural speech patterns to execute predefined opertions within the users digital environment.
-      
-            </HeaderP>
         </div>
-   
       <DemoVid/> 
-
       </UpperContainer>
 
-
-
-      <LowerContainer>
-      
+      <LowerContainer>  
         < InfoSection >
-        <p> The aim of the SpeakEasy project was to explore the potential of AI to create a more friendly and intuitive user experience, 
-              particularly for those users with specific visual or cognitive requirements. 
-              
-              More what it does and why...
+        <p> The aim of the SpeakEasy project was to explore the potential of AI to create a more friendly and intuitive 
+          user experience, with particular consideration towards those users with specific visual or cognitive requirements.
+         SpeakEasy interprets the users natural speech patterns to execute predefined opertions within the users digital environment.
                </p>
 
           <h3>Technical Considerations</h3>
@@ -101,11 +148,11 @@ const SpeakeasyInfo = () => {
           <p>Although primarily a JavaScript project, I chose to use Java Spring to manage the database API, having recently studied Spring
              and being very keen to deploy it in a project at first opportunity. Spring provided a neat, reliable way to create the CRUD endpoints required.  </p>
 
-<p>The back end runs on Node.js with an Express server, which is passed into an instance of socket.io to allow instant two way communication between
+<p>   <img src={projectDiagram} alt="project-diagram"></img>
+ The back end runs on Node.js with an Express server, which is passed into an instance of socket.io to allow instant two way communication between
    the client and server via a web socket connection.   User data is passed to an AI model which has been trained to respond with a JS readable object
    that can be reliably parsed by the data handler, thus providing instructions to manipulate the front end application.</p>
 
-   <img src={projectDiagram} alt="project-diagram"></img>
 
 <p>The front end is a React application which uses the voice-to-text API to turn user's verbal input to a string 
   that can be passed to the AI on the back end,
@@ -138,9 +185,9 @@ const SpeakeasyInfo = () => {
 
 I chose to use web sockets to connect the front and back end for three reasons.  The first reason was to make the chat-response experience as natural as possible.  The second was to allow more opportunities for extension.  Being able to maintain multiple live connections simultaneously offers many exciting possibilities.  The third reason is they sounded like a really cool piece of technology, that would be fun to learn about and deploy!</p>
 
-          <p> <h5>What were the hardest problems to overcome?</h5>The trickiest parts of the project were, on one hand, to persuade the AI model to return its response in a predictable, JS readable format, and on the other hand, to handle the error when it failed to do so.  After numerous iterations, a system prompt was developed which successfully launched the correct font end process about 99% of there time.  To handle the remaining 1%, with the time and resources available, the non JS readable response is returned as a conversation message, avoiding an error on the back end an unresponsive front end.</p>
+          <p> <h4>What were the hardest problems to overcome?</h4>The trickiest parts of the project were, on one hand, to persuade the AI model to return its response in a predictable, JS readable format, and on the other hand, to handle the error when it failed to do so.  After numerous iterations, a system prompt was developed which successfully launched the correct font end process about 99% of there time.  To handle the remaining 1%, with the time and resources available, the non JS readable response is returned as a conversation message, avoiding an error on the back end an unresponsive front end.</p>
 
-          <p> <h5>What would I do differently if starting again today?</h5>
+          <p> <h4>What would I do differently if starting again today?</h4>
           I would think a bit more about the application structure, particularly in terms of maintaining loose couplings
            between components.  For example, the front end calls the database API directly, and a planned extension 
            would also have the dataHandler interact directly with the DB.  I think it would be more appropriate for all 
@@ -183,11 +230,7 @@ If handling more traffic, or using a more expensive model, this could represent 
       
       </LowerContainer>
 
-   
-
-      
-
-    <Link to="/">Back to Projects</Link>
+    <ReturnLink to="/"> Back to Projects</ReturnLink>
     </Bg>)
         
      

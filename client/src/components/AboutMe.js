@@ -93,8 +93,7 @@ const AboutMe = () => {
             <AboutMeContainer id="aboutme">
                 <InnerContainer>
                     <AboutText> <span> An enthusiastic,  self motivated career changer with a passion for learning and solving problems.</span><br></br><br></br> 
-                     With experience in management, lean methodologies and process design, 
-I began as a self taught hobby coder in 2020, graduating from CodeClan’s Professional Software Development bootcamp in 2023, where I developed 
+                     With experience in management, lean methodologies, and process design, I began to teach myself to code in 2020, graduating from CodeClan’s Professional Software Development bootcamp in 2023, where I developed 
 the skills and processes required to turn my hobby into a careeer. <br></br><br></br>
 Away from the screen,  I love to get out into nature with my partner and our dog     
  <Tooltip imagePath={corriePic}>,  Corrie</Tooltip>, which fuels my creativity and

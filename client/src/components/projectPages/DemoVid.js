@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const VideoContainer = styled.div`
-    border: 4px solid yellow;
+    border: 4px solid black;
     aspect-ratio: 16/9;
     width: 40%;
     flex:none;
-    align-self: flex-start;
+    /* align-self: flex-start; */
 `
 
 const Sh1 = styled.h1`
