@@ -140,9 +140,8 @@ const KnottyInfo = () => {
       <UpperContainer>
         <div> 
             <HeaderP>   
-            Knotty is a fast, ferocious sport played in the remote fishing communities of the Scottish Highlands.<br></br><br></br>
-            Knotty Chsmpionship Manager simulates the management of a knotty tournament. Arrange matches, play simulated games, try to top the leader board!
-
+            Knotty Championship Manager is a sports management simulator loosely based on a popular football management simulator, built with Python, Flask and PostgreSQL.<br></br><br></br>
+            Knotty is a fast, ferocious sport played in the remote fishing communities of the Scottish Highlands.   
              </HeaderP>
         </div>
       <DemoVid/> 
@@ -150,21 +149,30 @@ const KnottyInfo = () => {
 
       <LowerContainer>  
         < InfoSection >
-        <p> The brief for this Codeclan project was to simulate a sports league.  This app allows users to create a new team,  schedule fixtures against 
-            other teams, review the action from each match, and follow their progress on the leaderboard.  Admin users have full control, and can Create, Read, Update the details, or 
-            Delete any team in the league.
+        <p><h5>Features: </h5>
+          <ul>
+            <li> <strong>Generate a new Team of Players
+	-  </strong>Players are generated with random ability levels</li>
+            <li> <strong>Buy and sell players
+	-  </strong>- Propose, accept, decline or negotiate a transfer offer.  Players value is related to their skill</li>
+            <li> <strong>Play matches
+	-  </strong>Player skill determines a team’s strength, which determines its chances of winning a match.</li>
+            <li> <strong>Match Reports
+	-  </strong>See the action unfold with thrilling, blow by blow match reports
+</li>
+          </ul>
                </p>
 
           <h3>Technical Considerations</h3>
 
-          <p>This was a strictly Pythin only project - no JS allowed on the front end.  Server-side rendered html, using Jinja to inject data into the templates, 
-            is served to the front end.
-              </p>
+          <p>This project is built in the Model - View - Controller pattern, using the Flask framework
+             to manage the flow of data between the database and the client.  It  provides RESTful
+              routes and generates server rendered HTML for the browser, using the Jinja2 templating library.<br></br><br></br>
 
-<p>  The back end runs on Python, using the Flask framework</p>
+        Database interaction is facilitated by the psycopg2 library. JavaScript was not allowed din the building of this project.
+          </p>
 
 
-<p>IT uses a PostgreSQL database, managed with the help of the psycopg2 package. </p>
 
     <p>The diagram shows ....</p>
         </InfoSection>
@@ -173,20 +181,43 @@ const KnottyInfo = () => {
           <h3>Professional Development</h3>
 
           <p><h4>How has this project helped me grow as a developer?</h4>  
-          <h5>MVC Pattern</h5>
-         modilar code, seperation of concerns, dep injection? </p>
+          <h5>Application Architecture</h5>
+
+          The first full stack app I built, this project was a great learning experirnce for me.  
+          It really opened my eyes to the importance of maintaining a logical structure, including adhering to the single responsibility 
+          principle and not allowing elements to become too tightly coupled.
+          This is a mistake I had been making in my projects prior to the CodeClan bootcamp.   I gained confidence
+          in Object Oriented Programming and writing clean, DRY, maintainable code.
+     </p>
              
-         <p> <h5>SQL</h5> Exposure to SQL and relational DBs</p>
+         <p> <h5>SQL</h5>The project uses PostgreSQL to hold game data and provide it to the application as required.
+           Tables are related to one another in various ways.  Each player has a team, and each team has many players.
+           A Transfer has a player and two teams.  Creating these relationships in the databas was a great way to build competence with SQL.</p>
            
-           <p><h5> full stack python</h5>
-           Using Py for web development....
+           <p><h5> Web Development with Python</h5>
+           I had previously built small web apps with JavaScript, but had never done anything with Python outside of the command line.  It was
+           fun to use python code to manage an api and serve html, as well as a great way to buid familiarity with the awesome language that is Python!
+</p>
+           <p><h5> Continuing to build</h5>
+           Since the bootcamp, and with some more experience of OOP and good practice in writing code, 
+          I have revisited the project and added some new features.
+          In addition to being a really fun project to work on,
+           its has also been encouraging to see my own development over a relatively short time.
 </p>
 
           <p> <h4>What were the hardest problems to overcome?</h4>
-          The trickiest parts of the project were...</p>
+          The most important challenge while building this was to structure the app correctly in the first instance,
+           allowing it to be extendable. This both meant using predictable,  RESTful routing conventions,
+            and logical separation of concerns in the app itself.  Creating good structures around the Game 
+            and Match classes made it much easier later on to add Player and Transfer classes, and the various 
+            associated actions around them.</p>
 
           <p> <h4>What would I do differently if starting again today?</h4>
-          I would ...
+          If starting again today I would give more thought to the CSS and HTML structure.  While the python is modular and extendable,
+           the css unfortunately is not.  Some more specific rules and organisation of the code would make updating the UI a lot easier.
+            In addition, some more semantic HTML tags should be used and some additional though given to users with additional
+            accessibility requirements, including keyboard navigation and screen readers.  The fonts chosen also potentially
+             raise accessibility issues and should be reviewed.
 
         </p>
         </InfoSection>
@@ -196,25 +227,29 @@ const KnottyInfo = () => {
 
           
           <p><h5>Implement a Front-end Framework</h5>  
-            Having presented the project, it is no longer restricted by the 'no JS' rule, so I think the UX would be
-            improved by using a framework like react. As the simple UI is something of a design choice, perhaps it could 
+          As this was a Python bootcamp project, no JavaScript was permitted.  However, the user experience 
+          could be improved by deploying a front end framework, such as React.
+           As the simple UI is something of a design choice, it could 
             be a good opportunity to explore a lightweight framework like Svelt.
 
 </p>
-          <p><h5>Improve Game simulation Logic </h5>  
-          
-            More variables could be introduced to add realism to game simulations and results.  Elements like weather, 
-            recent form, fatigue, injury, red and yellow cards, would all bring an aditional dimension to gameplay.
-<br></br>
-            Updating the model to include individual players on each team would add even greater depth, and allow 
-            for transfers and player stats.
+          <p><h5>Further Extensions </h5>  
+          <ul>
+            <li><strong> Team Selection </strong> Choose which players take part in the next game  </li>
+            <li><strong> Knock-out Competition </strong>      Introduce a Tournament class that will handle the selection of teams, and arrange knock-out matches to determine a champion
+  </li>
+            <li><strong> Training </strong> a train() method on Player could increase the players skill, and hence value.
+  </li>
+            <li><strong> Fatigue </strong> Introduce a fatigue attribute on Player, which increases after games or training,
+             potentially affects skill level.
+  </li>
+            <li><strong> Fouls/ Injuries </strong> Update the game simulation algorithm to include injuries and fouls
+  </li>
+            <li><strong> Additional attributes </strong> Attributes such as Speed, Flair, Aggression could be included on Player, and feed into Team properties.
+  </li>
+          </ul>
+ </p>
 
-</p>
-
-        <p> <h5>Knock-out Competition</h5> 
-     Introduce a Tournament class that will handle the selection of teams, and arrange knock-out matches until 
-     a champion is crowned.
-</p>
         </InfoSection>
       
       </LowerContainer>
