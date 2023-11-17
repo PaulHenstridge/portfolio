@@ -138,7 +138,7 @@ const YahtzeeInfo = () => {
       <UpperContainer>
         <div> 
             <HeaderP>   
-            The fun dice game, Yahtzee, built using Java in M-V-VM pattern, with a Java Swing GUI front end.<br></br><br></br>
+            The fun dice game Yahtzee, built entirely with Java, with a GUI front end.<br></br><br></br>
 
             Try to register the best possible score each turn with a maximum of three dice rolls!
              </HeaderP>
@@ -150,12 +150,12 @@ const YahtzeeInfo = () => {
         < InfoSection >
         <p> 
 The purpose of this project was to immerse myself in Java and really get into the “Java mindset”. 
- I enjoyed the brief introduction at CodeClan, and wanted to build on that with a bit more time to explore. 
+ I enjoyed the brief introduction at CodeClan, and wanted to build on that with some more time to explore. 
   I chose Yahtzee because it’s a relatively simple game, but has a reasonable amount of logic behind it.
 
-I took it slow at first, as I knew what I wanted to do but wanted to figure out the right way to implement it. 
+The project moved slowly at first, as I knew what I wanted to do but wanted to figure out the right way to implement it. 
  By considering at each step what approach would be most appropriate to produce clean, maintainable, extendable code,
-  I tried to build a project that adheres to SOLID principles.
+  I tried to build a project that adheres closely to SOLID principles.
 </p>
 
           <h3>Technical Considerations</h3>
@@ -167,13 +167,10 @@ I took it slow at first, as I knew what I wanted to do but wanted to figure out 
 </p>
 
 
-<p> A GUI is used to represent the game on the front end, allowing mer to fully render the game form within the Java application,
- without relying on a browser serve HTML.</p>
+<p> A GUI is used to represent the game on the front end, allowing me to fully render the game from within the Java application,
+ without the need to serve HTML for a browser.</p>
 
 
-
-
-    <p>The diagram shows ....</p>
         </InfoSection>
 
         < InfoSection >
@@ -184,14 +181,14 @@ I took it slow at first, as I knew what I wanted to do but wanted to figure out 
           I must admit, on my first experience with Java I found some aspects of it, such as static typing, a bit cumbersome,
            and the IDE somewhat overbearing.  However, since the bootcamp I have been learning more about OOP and SOLID principles,
             and I have come to understand and appreciate the benefits of Java’s “belt and braces” approach, and the security
-             and confidence it can offer.
+             and confidence it can offer a developer.
 
-Type-checking at compile time significantly reduces the chances of runtime errors, making it harder to make mistakes
- and easier to pinpoint them when they occur.
+I can see now that type-checking at compile time significantly reduces the chances of runtime errors, making it harder to make mistakes
+ and easier to pinpoint them when they occur.<br></br><br></br>
 
-The development process feels more deliberate and structured.
- I feel the emphasis on explicit type declarations and object-oriented principles has encouraged a more disciplined
-  "Java Mindset", which I have tried to embrace and deploy in other projects and other languages. </p>
+The development process feels deliberate and structured, and the emphasis on explicit type declarations 
+and object-oriented principles within Java has helped me develop a more disciplined
+  "Java Mindset", which I am trying to internalise and deploy in other projects and other languages. </p>
              
          <p> <h5>Enums</h5>
          I deployed three sets of enums which were used throughout the project to eliminate the possibility of error in these categories. 
@@ -209,15 +206,26 @@ The development process feels more deliberate and structured.
 
 The use of interfaces ensured that higher-level modules are not dependent on lower-level modules, 
 but both are dependent on abstractions.  For example, the YahtzeeController takes an instance of IGame,
- rather than Game itself.  this means changes to the Game logic will not affect the Controller logic,
+ rather than Game itself.  This means changes to the Game logic will not affect the Controller logic,
   as log as Game implements all the methods of IGame.
 </p>
 
           <p> <h4>What were the hardest problems to overcome?</h4>
-          The trickiest parts of the project were...</p>
+          One of the biggest challenges was maintaining loose couplings across the application.
+            Using a Java GUI meant Java code across the project and the risk of GUI logic becoming bound to the model.
+             The GUI receives new data from a propertyChangeListener. The properties are managed by classes in the model,
+               which meant that the View would need to directly observe and react to changes in the model.
+                 This represented too close a coupling, so I decided to use a viewModel as an intermediary to manage state for the view. 
+  </p> 
+   <p>             
+In this way, the controller calls methods on the model and passes the result to be stored on the viewModel. 
+ The viewModelObserver observes and updates the GUI when any property changes, without any direct relationship with the model.
+</p>
 
           <p> <h4>What would I do differently if starting again today?</h4>
-          I would ...
+          If I were starting a new Java project today, I would use the Spring framework from the beginning. 
+           Now that I have some experience using “vanilla Java” I am keen to explore the many features
+            and benefits that Spring provides, and to gain experience using it in a real project.
 
         </p>
         </InfoSection>
@@ -226,18 +234,26 @@ but both are dependent on abstractions.  For example, the YahtzeeController take
           <h3>Next Steps</h3>
 
           
-          <p><h5>Implement web API</h5>  
-           use Spring Boot to implement a web API, allowing the game ot be extended to the browser.
-
+          <p>
+Given my focus on making the application modular and extendable,
+ the next logical step would be to extend it! <br></br> Here are some ideas under consideration:
 </p>
-          <p><h5>Add data persistence </h5>  
+          <p><h5>Develop Alternative Game Models </h5>  
           
-a database to save high scores, user information etc would add ot he playability of the game.
+          The modular structure should allow an entirely new set of model classes to be substituted, providing an alternative gameplay experience
+           without affecting the rest of the application.
 
 </p>
 
-        <p> <h5>Multi-player play</h5> 
-Explore options to expand the game to be multi-player
+        <p> <h5>Add a Web API</h5> 
+        Adapt the project to be consumed by a browser.  Build a JavaScript front end to consume it.
+</p>
+        <p> <h5>MultiPplayer Play</h5> 
+        Keep track of multiple players games at the same time, manage turns, compare scores.
+</p>
+        <p> <h5>Add a Database</h5> 
+        Retain game data such as high scores and player profiles.
+
 </p>
         </InfoSection>
       

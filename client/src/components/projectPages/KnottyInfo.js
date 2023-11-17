@@ -173,8 +173,6 @@ const KnottyInfo = () => {
           </p>
 
 
-
-    <p>The diagram shows ....</p>
         </InfoSection>
 
         < InfoSection >
