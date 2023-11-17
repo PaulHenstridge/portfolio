@@ -133,12 +133,14 @@ const ReturnLink = styled(Link)`
 
 const YahtzeeInfo = () => {
     return (<Bg>
-      <h1>TeeDee-DeeYahtzee</h1>
+      <h1>JavaYahtzee!</h1>
       
       <UpperContainer>
         <div> 
             <HeaderP>   
-            Yahtzee!  Play the game and win a boat!  Lets see what you could have won....
+            The fun dice game, Yahtzee, built using Java in M-V-VM pattern, with a Java Swing GUI front end.<br></br><br></br>
+
+            Try to register the best possible score each turn with a maximum of three dice rolls!
              </HeaderP>
         </div>
       <DemoVid/> 
@@ -146,20 +148,30 @@ const YahtzeeInfo = () => {
 
       <LowerContainer>  
         < InfoSection >
-        <p> This project begas an a TDD practice exercise, using Java and Junit to test the game logic.
-            I decided to extend the project by adding a GUI to make the game playable.  
-            I focused on SOLID principles, TDD and DRY readable code in this project.
-               </p>
+        <p> 
+The purpose of this project was to immerse myself in Java and really get into the “Java mindset”. 
+ I enjoyed the brief introduction at CodeClan, and wanted to build on that with a bit more time to explore. 
+  I chose Yahtzee because it’s a relatively simple game, but has a reasonable amount of logic behind it.
+
+I took it slow at first, as I knew what I wanted to do but wanted to figure out the right way to implement it. 
+ By considering at each step what approach would be most appropriate to produce clean, maintainable, extendable code,
+  I tried to build a project that adheres to SOLID principles.
+</p>
 
           <h3>Technical Considerations</h3>
 
-          <p>TDD - MVC pattern - MVVM model - use of Enums - strict seperation of cencerns
-              </p>
+          <p>In order to maintain clear separation of concerns and loose couplings between components,
+             I adapted the Model - View - Controller (MVC) pattern to include a view model, which is responsible
+              for maintaining the state required in the View.  This maintains the modularity in view logic,
+               and avoids a direct observer relationship between the view and the model..
+</p>
 
-<p>  The app is built with Java, in the MVVM pattern, with a Java Swing GUI.</p>
+
+<p> A GUI is used to represent the game on the front end, allowing mer to fully render the game form within the Java application,
+ without relying on a browser serve HTML.</p>
 
 
-<p>.... </p>
+
 
     <p>The diagram shows ....</p>
         </InfoSection>
@@ -168,13 +180,37 @@ const YahtzeeInfo = () => {
           <h3>Professional Development</h3>
 
           <p><h4>How has this project helped me grow as a developer?</h4>  
-          <h5>MVC Pattern</h5>
-         modilar code, seperation of concerns, dep injection? </p>
+          <h5>"Java Mindset"</h5>
+          I must admit, on my first experience with Java I found some aspects of it, such as static typing, a bit cumbersome,
+           and the IDE somewhat overbearing.  However, since the bootcamp I have been learning more about OOP and SOLID principles,
+            and I have come to understand and appreciate the benefits of Java’s “belt and braces” approach, and the security
+             and confidence it can offer.
+
+Type-checking at compile time significantly reduces the chances of runtime errors, making it harder to make mistakes
+ and easier to pinpoint them when they occur.
+
+The development process feels more deliberate and structured.
+ I feel the emphasis on explicit type declarations and object-oriented principles has encouraged a more disciplined
+  "Java Mindset", which I have tried to embrace and deploy in other projects and other languages. </p>
              
-         <p> <h5>SQL</h5> Exposure to SQL and relational DBs</p>
+         <p> <h5>Enums</h5>
+         I deployed three sets of enums which were used throughout the project to eliminate the possibility of error in these categories. 
+          Although using common enums does bind the model and view to certain extent, I feel it is a fair trade off 
+          for the type security it provides.  These categories are fundamental to the operation of the game, 
+          so would be unlikely to change in any future extension or adaptation of the game.
+          </p>
            
-           <p><h5> full stack python</h5>
-           Using Py for web development....
+           <p><h5> Interfaces</h5>
+           I made extensive use of interfaces in the project to ensure modularity and flexibility in the codebase. 
+           By defining clear contracts through interfaces, I was able to achieve loose coupling between components,
+            which is essential for maintainable and scalable software. This approach allowed different parts of 
+            the application to interact without being tightly bound, giving freedom to modify or extend individual 
+            components without affecting others.
+
+The use of interfaces ensured that higher-level modules are not dependent on lower-level modules, 
+but both are dependent on abstractions.  For example, the YahtzeeController takes an instance of IGame,
+ rather than Game itself.  this means changes to the Game logic will not affect the Controller logic,
+  as log as Game implements all the methods of IGame.
 </p>
 
           <p> <h4>What were the hardest problems to overcome?</h4>
