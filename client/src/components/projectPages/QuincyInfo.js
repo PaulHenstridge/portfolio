@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Link} from "react-router-dom"
 import DemoVid from "./DemoVid";
 
+import strptime from "../../assets/projectImages/strptime.png"
 
 
 
@@ -40,12 +41,12 @@ const Bg = styled.div`
     @media screen and (min-width:781px) {
         &  img:nth-child(odd) {
       float: left;
-      max-width:40%;
+      max-width:80%;
       margin:1rem;
     }
     &  img:nth-child(even) {
       float: right;
-      max-width:40%;
+      max-width:80%;
       margin:1rem;
     }
     }
@@ -135,6 +136,10 @@ const ReturnLink = styled(Link)`
   }
 `
 
+const Snippet = styled.img`
+    min-width:780px;
+`
+
 const QuincyInfo = () => {
     return (<Bg>
       <h1>Quincy API</h1>
@@ -155,26 +160,22 @@ const QuincyInfo = () => {
         <p>
         As a subscriber to the weekly newsletter of articles and tutorials from Quincy Larson of FreeCodeCamp,
               I was excited to discover there was a json archive of all the urls shared over the years,
-               as this could be made into a great API.  <br></br><br></br>
+               as this had potential to be made into a great API.  <br></br><br></br>
 
         <h4> The objectives of this project:</h4>
         <ul>
             <li>
-                to explore python’s module system, and its ecosystem of packages, 
+                Explore python’s module system, and its ecosystem of packages, 
                 by building a functional, useful API.
             </li>
             <li>
-                to write clean, DRY code that adheres to industry best practice - scalable and maintainable.
+                Write clean, DRY code that adheres to industry best practice - scalable and maintainable.
             </li>
             <li>
-                to push my comfort zone and develop greater fluency in python.
+                Push my comfort zone and develop greater fluency in python.
              </li>
         </ul>      
-
-
-            <h5>Features: </h5>
- All the good shizzles
-               </p>
+    </p>
 
           <h3>Technical Considerations</h3>
 
@@ -211,7 +212,7 @@ The front end is a simple HTML page with CSS and JavaScript, which allows users
           
 This project threw up lots if different challenges, and finding ways to solve them using
  Python really helped develop my skills.  These included handling inconsistent fields
-  in the data [[show flexible_strptime method in get_data]], 
+  in the data <Snippet src={strptime} alt="strptime function" class="snippet"></Snippet>, 
    controlling the flow of data to an external API using a rate limiter
     [[ show rate limiter in add_content_tags ]]  
     and sanitising the AI response data before adding it to the database.[[ show sanitising code]].
