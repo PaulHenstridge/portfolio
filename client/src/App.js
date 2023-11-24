@@ -49,6 +49,7 @@ function App() {
                 <AboutMe />
                 <Routes>
                     <Route path="/" element={<Projects />} />
+                    <Route path="/portfolio" element={<Projects />} />
                     <Route path="/projects/speakeasy" element={<SpeakeasyInfo />} />
                     <Route path="/projects/quincy" element={<QuincyInfo />} />
                     <Route path="/projects/knotty" element={<KnottyInfo />} />

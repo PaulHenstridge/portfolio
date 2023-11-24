@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 import styled from "styled-components";
 import PageScroll from "./PageScroll";
@@ -95,6 +95,14 @@ const ProjectPanel = styled.article`
 
 const Projects = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
+    const topRef = useRef(null);
+    const location = useLocation();
+
+    useEffect(() => {
+         if (location.pathname.startsWith('/projects/') && topRef.current) {
+          topRef.current.scrollIntoView();
+        }
+      }, [location]); // This effect runs when the route changes
 
     useEffect(() => {
         const handleScroll = () => {
@@ -111,7 +119,9 @@ const Projects = () => {
     const bgPosition = `50% calc(80% - ${scrollPosition * 0.5}px)`;
 
 
-    return (<ProjectsContainer id="projects"  >
+    return (
+    <ProjectsContainer id="projects" >
+        <div ref={topRef}></div>
         <ProjectPanel>
             <img src={speakeasy} alt="speakeasy home page" />
   

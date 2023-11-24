@@ -14,7 +14,23 @@
     line-height: 1.6;
 }
 
-
-d{
-    color:rgb(73, 70, 70)
+.hoverable > article {
+    transition: scale 350ms ease, opacity 350ms linear;
+    scale:1;
 }
+
+.hoverable > article:hover{
+    scale: 1.1;
+    p {
+        opacity: 1;
+    }  
+}
+
+.hoverable:has(article:hover) article:not(:hover) {
+    scale: 0.9;
+    opacity: 0.6;
+}
+
+.hoverable > article:not(:hover) { 
+    transition-delay: 0.08s;
+} 
