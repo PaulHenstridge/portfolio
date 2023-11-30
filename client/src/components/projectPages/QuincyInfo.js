@@ -5,7 +5,7 @@ import DemoVid from "./DemoVid";
 import strptime from "../../assets/projectImages/strptime.png"
 
 
-
+const quincyVideoId = "g5biglhn38s"
 
 const Bg = styled.div`
     background-color: #0a0a23;
@@ -152,7 +152,7 @@ const QuincyInfo = () => {
                 with AI generated tags allowing for advanced searching within articles.
              </HeaderP>
         </div>
-      <DemoVid/> 
+      <DemoVid videoId ={quincyVideoId}/> 
       </UpperContainer>
 
       <LowerContainer>  
