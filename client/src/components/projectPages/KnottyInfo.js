@@ -2,8 +2,7 @@ import styled from "styled-components";
 import {Link} from "react-router-dom"
 import DemoVid from "./DemoVid";
 
-
-
+import knotty_erd from "../../assets/projectImages/Knotty_ERD.png"
 
 
 const Bg = styled.div`
@@ -170,6 +169,7 @@ const KnottyInfo = () => {
               routes and generates server rendered HTML for the browser, using the Jinja2 templating library.<br></br><br></br>
 
         Database interaction is facilitated by the psycopg2 library. JavaScript was not allowed din the building of this project.
+        <img src={knotty_erd} alt="knotty ERD"></img>
           </p>
 
 
