@@ -4,6 +4,7 @@ import DemoVid from "./DemoVid";
 
 import knotty_erd from "../../assets/projectImages/Knotty_ERD.png"
 
+const knottyVideoId = "isGEibDtSRM"
 
 const Bg = styled.div`
     background-color: #402E32;
@@ -143,7 +144,8 @@ const KnottyInfo = () => {
             Knotty is a fast, ferocious sport played in the remote fishing communities of the Scottish Highlands.   
              </HeaderP>
         </div>
-      <DemoVid/> 
+        <DemoVid videoId ={knottyVideoId}/> 
+
       </UpperContainer>
 
       <LowerContainer>  
