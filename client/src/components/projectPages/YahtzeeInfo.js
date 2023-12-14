@@ -163,7 +163,7 @@ The project moved slowly at first, as I knew what I wanted to do but wanted to f
           <p>In order to maintain clear separation of concerns and loose couplings between components,
              I adapted the Model - View - Controller (MVC) pattern to include a view model, which is responsible
               for maintaining the state required in the View.  This maintains the modularity in view logic,
-               and avoids a direct observer relationship between the view and the model..
+               and avoids a direct observer relationship between the view and the model.
 </p>
 
 

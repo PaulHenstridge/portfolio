@@ -7,7 +7,7 @@ import hillPath from "../assets/Hillpath.jpg"
 import knotty from "../assets/knotty.png"
 import speakeasy from "../assets/speakeasy.png"
 import quincy from "../assets/quincy_api.png"
-import sequencer from "../assets/sequencer.png"
+import yahtzee from "../assets/yahtzee.png"
 
 
 
@@ -125,7 +125,7 @@ const Projects = () => {
         <ProjectPanel>
             <img src={speakeasy} alt="speakeasy home page" />
   
-               <p> <h3> <strong>A Voice Controlled, AI Supported, Accessibility Assistant   </strong></h3>
+     <p>           <h3> <strong>A Voice Controlled, AI Supported, Accessibility Assistant   </strong></h3>
 
                Designed to support visually impaired and neurodivergent users with voice and keyboard commands,
                 and AI integrated support.<br></br>
@@ -158,6 +158,7 @@ const Projects = () => {
             <p><h3> <strong> Knotty Championship Manager   </strong></h3>
                 
                 League management simulator.  Full Stack app with Python, Flask, and PostgreSQL<br></br><br></br>
+                Create a team, buy and sell players, play in matches and tournaments, and compete in the league!
                 <br></br><br></br><br></br>
                 <Link to="/projects/knotty">Learn More</Link>
 
@@ -167,13 +168,16 @@ const Projects = () => {
         </ProjectPanel>
 
         <ProjectPanel>
-            <p><h3> <strong> Yahtzee ######   </strong></h3>
+            <p><h3> <strong> Yahtzee  </strong></h3>
+
+            The classic dice game "Yahtzee", built with Java, playable through a Java Swing GUI.  The project follows the M-V-VM pattern
+           and adheres to SOLID principles.<br></br><br></br><br></br>
            <Link to="/projects/yahtzee">Learn More</Link>
-                <a href='https://github.com/PaulHenstridge/loop-sequencer'>View Code  <i className='devicon-github-original'></i></a></p>
+            <a href='https://github.com/PaulHenstridge/JavaYahtzee'>View Code  <i className='devicon-github-original'></i></a></p>
                 
                
 
-            <img src={sequencer} alt="tone selection interface" />
+            <img src={yahtzee} alt="Yahtzee GUI" />
         </ProjectPanel>
 
 
