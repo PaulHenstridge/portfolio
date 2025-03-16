@@ -5,7 +5,7 @@ const EmailLink = styled.h2`
     padding-top:2rem;
     color:rgb(221, 248, 251);
     & > a{
-        text-decoration:none;
+        text-decoration:none; 
         color:red;
     }
 `

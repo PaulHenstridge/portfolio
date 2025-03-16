@@ -78,9 +78,9 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        axios.post('http://localhost:3001/send', form)
-            .then((response) => console.log(response.data))
-            .catch((error) => console.error(error));
+        axios.post('https://formspree.io/f/mjkgrpnw',
+        form,
+        { headers: { 'Content-Type': 'application/json' } })
     }
 
     return (

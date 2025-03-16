@@ -77,12 +77,12 @@ const HeroHeader = () => {
     return (
         <HeroContainer>
             <Fade duration="1000" direction="down">
-                <StyledH1>Hi, I'm Paul </StyledH1>
+                <StyledH1>Paul Henstridge </StyledH1>
             </Fade>
             <Reveal keyframes={SimpleFadeIn} duration={3200}>
                 <div>
-                <h1> Software Developer</h1>
-                <h2>JavaScript|Python|Java</h2>
+                <h1> Software Engineer</h1>
+                <h2>JavaScript | Python | Java</h2>
                 </div>
         
             </Reveal>

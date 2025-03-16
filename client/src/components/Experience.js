@@ -24,7 +24,7 @@ const ExperiencePanel = styled.article`
 
 
 const Experience = () => {
-    return ( <Container className="hoverable">
+    return ( <Container className="hoverable" id="experience">
         <ExperiencePanel >
             <h3>CodeClan Professional Software Development Bootcamp</h3>
             <p>some details to be revealed on hover - explore accessability implications</p>

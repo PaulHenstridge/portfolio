@@ -127,9 +127,13 @@ const Projects = () => {
   
      <p>           <h3> <strong>A Voice Controlled, AI Supported, Accessibility Assistant   </strong></h3>
 
-               Designed to support visually impaired and neurodivergent users with voice and keyboard commands,
-                and AI integrated support.<br></br>
-               Users can interact with the app via natural language voice commands.<br></br><br></br>
+               This 2023 bootcamp capstone project explored the possibilities of AI in assisting users to interact with technology on their own terms.
+               I also investigated how AI might be used and manipulated to do things beyond its defined scope.  I building the project I explored the practicalities and 
+               design considerations of accesability in the digital world.
+               
+               The application can support visually impaired and neurodivergent users to interact with their computers, in predefined ways, with keyboard and voice commands,
+               using natural speech patterns.<br></br>
+              <br></br><br></br>
             
                React, Express, GPT3.5, Postgres DB with Java Spring<br></br><br></br>
                <Link to="/projects/speakeasy">Learn More</Link>

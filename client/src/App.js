@@ -56,9 +56,9 @@ function App() {
                     <Route path="/projects/yahtzee" element={<YahtzeeInfo />} />
                 </Routes>
                 {/* <Projects /> */}
-                <Experience />
-                <StaticContact />
-                {/* <Contact/> */}
+                {/* <Experience /> */}
+                {/* <StaticContact /> */}
+               `` <Contact/>
                 <Footer />
                 </MaxWidthContainer>
             </Router>
